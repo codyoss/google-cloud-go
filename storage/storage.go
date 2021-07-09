@@ -41,10 +41,12 @@ import (
 	"cloud.google.com/go/internal/optional"
 	"cloud.google.com/go/internal/trace"
 	"cloud.google.com/go/internal/version"
+	"golang.org/x/oauth2/google"
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/option"
 	"google.golang.org/api/option/internaloption"
 	raw "google.golang.org/api/storage/v1"
+	"google.golang.org/api/transport"
 	htransport "google.golang.org/api/transport/http"
 )
 
@@ -87,8 +89,9 @@ func setClientHeader(headers http.Header) {
 // Clients should be reused instead of created as needed.
 // The methods of Client are safe for concurrent use by multiple goroutines.
 type Client struct {
-	hc  *http.Client
-	raw *raw.Service
+	creds *google.Credentials
+	hc    *http.Client
+	raw   *raw.Service
 	// Scheme describes the scheme under the current host.
 	scheme string
 	// EnvHost is the host set on the STORAGE_EMULATOR_HOST variable.
@@ -105,6 +108,7 @@ type Client struct {
 // are safe for concurrent use by multiple goroutines.
 func NewClient(ctx context.Context, opts ...option.ClientOption) (*Client, error) {
 	var host, readHost, scheme string
+	var creds *google.Credentials
 
 	// In general, it is recommended to use raw.NewService instead of htransport.NewClient
 	// since raw.NewService configures the correct default endpoints when initializing the
@@ -118,10 +122,16 @@ func NewClient(ctx context.Context, opts ...option.ClientOption) (*Client, error
 		readHost = "storage.googleapis.com"
 
 		// Prepend default options to avoid overriding options passed by the user.
-		opts = append([]option.ClientOption{option.WithScopes(ScopeFullControl), option.WithUserAgent(userAgent)}, opts...)
+		opts = append([]option.ClientOption{option.WithScopes(ScopeFullControl, "https://www.googleapis.com/auth/cloud-platform"), option.WithUserAgent(userAgent)}, opts...)
 
 		opts = append(opts, internaloption.WithDefaultEndpoint("https://storage.googleapis.com/storage/v1/"))
 		opts = append(opts, internaloption.WithDefaultMTLSEndpoint("https://storage.mtls.googleapis.com/storage/v1/"))
+		c, err := transport.Creds(ctx, opts...)
+		if err != nil {
+			return nil, err
+		}
+		creds = c
+		opts = append(opts, internaloption.WithCredentials(creds))
 	} else {
 		scheme = "http"
 		readHost = host
@@ -150,6 +160,7 @@ func NewClient(ctx context.Context, opts ...option.ClientOption) (*Client, error
 	readHost = u.Host
 
 	return &Client{
+		creds:    creds,
 		hc:       hc,
 		raw:      rawService,
 		scheme:   scheme,
@@ -163,6 +174,7 @@ func NewClient(ctx context.Context, opts ...option.ClientOption) (*Client, error
 // Close need not be called at program exit.
 func (c *Client) Close() error {
 	// Set fields to nil so that subsequent uses will panic.
+	c.creds = nil
 	c.hc = nil
 	c.raw = nil
 	return nil
