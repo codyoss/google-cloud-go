@@ -195,6 +195,9 @@ func (g *GapicGenerator) regenSnippets(ctx context.Context) error {
 	if err := gensnippets.Generate(g.googleCloudDir, snippetDir, apiShortnames); err != nil {
 		log.Printf("warning: got the following non-fatal errors generating snippets: %v", err)
 	}
+	if err := gensnippets.GenerateMetadata(g.toSnippetMetadataConfig(microgenGapicConfigs), snippetDir); err != nil {
+		log.Printf("warning: got the following non-fatal errors generating snippet metadata: %v", err)
+	}
 	if err := replaceAllForSnippets(g.googleCloudDir, snippetDir); err != nil {
 		return err
 	}
@@ -703,4 +706,18 @@ func generateReadmeAndChanges(path, importPath, apiName string) error {
 func pkgName(importPath string) string {
 	ss := strings.Split(importPath, "/")
 	return ss[len(ss)-1]
+}
+
+func (g *GapicGenerator) toSnippetMetadataConfig(microConfigs []*microgenConfig) []*gensnippets.MetadataConfig {
+	var snippetConfigs []*gensnippets.MetadataConfig
+	for _, v := range microConfigs {
+		conf := &gensnippets.MetadataConfig{
+			GoogleapisDir:   filepath.Join(g.googleapisDir, v.inputDirectoryPath),
+			GenprotoDir:     filepath.Join(g.genprotoDir, "googleapis", strings.TrimPrefix(v.inputDirectoryPath, "google/")),
+			CloudDir:        filepath.Join(g.googleCloudDir, strings.TrimPrefix(v.importPath, "cloud.google.com/go/")),
+			GapicImportPath: v.importPath,
+		}
+		snippetConfigs = append(snippetConfigs, conf)
+	}
+	return snippetConfigs
 }
