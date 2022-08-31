@@ -83,6 +83,21 @@ func ListModName(dir string) (string, error) {
 	return string(mod), err
 }
 
+// ListModVersion finds a modules name and last version.
+func ListModVersion(dir string) (string, string, error) {
+	modC := execv.Command("go", "list", "-m", "-versions")
+	modC.Dir = dir
+	out, err := modC.Output()
+	if err != nil {
+		return "", "", err
+	}
+	ss := strings.Split(strings.TrimSpace(string(out)), " ")
+	if len(ss) < 2 {
+		return "", "", fmt.Errorf("expected go list out to have at least one version: %s", out)
+	}
+	return ss[0], ss[len(ss)-1], nil
+}
+
 // ListModDirName finds the directory in which the module resides. Returns
 // ErrBuildConstraint if all files in a module are constrained.
 func ListModDirName(dir string) (string, error) {
@@ -140,4 +155,10 @@ func CurrentMod(dir string) (string, error) {
 		return "", err
 	}
 	return strings.TrimSpace(string(out)), nil
+}
+
+func Get(dir, module, version string) error {
+	c := execv.Command("go", "get", fmt.Sprintf("%s@%s", module, version))
+	c.Dir = dir
+	return c.Run()
 }

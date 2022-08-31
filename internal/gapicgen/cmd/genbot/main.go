@@ -42,6 +42,7 @@ func main() {
 	githubName := flag.String("githubName", os.Getenv("GITHUB_NAME"), "The name of the author for git commits.")
 	githubEmail := flag.String("githubEmail", os.Getenv("GITHUB_EMAIL"), "The email address of the author.")
 	localMode := flag.Bool("local", strToBool(os.Getenv("GENBOT_LOCAL_MODE")), "Enables generating sources locally. This mode will not open any pull requests.")
+	aliasMode := flag.Bool("aliasgen", strToBool(os.Getenv("GENBOT_ALIAS_MODE")), "Enables generating aliases for migrated packages.")
 	forceAll := flag.Bool("forceAll", strToBool(os.Getenv("GENBOT_FORCE_ALL")), "Enables regenerating everything regardless of changes in googleapis.")
 
 	// flags for local mode
@@ -71,6 +72,14 @@ func main() {
 			log.Fatal(err)
 		}
 		return
+	} else if *aliasMode {
+		if err := genAlias(ctx, aliasConfig{
+			googleapisDir: *googleapisDir,
+			gocloudDir:    *gocloudDir,
+			genprotoDir:   *genprotoDir,
+		}); err != nil {
+			log.Fatal(err)
+		}
 	}
 	if err := genBot(ctx, botConfig{
 		githubAccessToken: *githubAccessToken,
