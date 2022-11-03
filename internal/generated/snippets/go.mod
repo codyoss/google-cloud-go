@@ -27,7 +27,7 @@ require (
 	cloud.google.com/go/cloudbuild v1.2.0
 	cloud.google.com/go/clouddms v1.2.0
 	cloud.google.com/go/cloudtasks v1.6.0
-	cloud.google.com/go/compute v1.12.0
+	cloud.google.com/go/compute v1.12.1
 	cloud.google.com/go/contactcenterinsights v1.2.2
 	cloud.google.com/go/container v1.3.1
 	cloud.google.com/go/containeranalysis v0.6.0
@@ -119,7 +119,7 @@ require (
 	cloud.google.com/go/websecurityscanner v1.2.0
 	cloud.google.com/go/workflows v1.7.0
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	google.golang.org/api v0.100.0
+	google.golang.org/api v0.102.0
 	google.golang.org/genproto v0.0.0-20221024183307-1bc688fe9f3e
 )
 
@@ -131,7 +131,7 @@ require (
 )
 
 require (
-	cloud.google.com/go/compute/metadata v0.1.0 // indirect
+	cloud.google.com/go/compute/metadata v0.2.1 // indirect
 	cloud.google.com/go/recaptchaenterprise/v2 v2.3.0 // indirect
 	cloud.google.com/go/vision/v2 v2.3.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -142,7 +142,7 @@ require (
 	golang.org/x/net v0.0.0-20221014081412-f15817d10f9b // indirect
 	golang.org/x/oauth2 v0.0.0-20221014153046-6fdb5e3db783 // indirect
 	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10 // indirect
-	golang.org/x/text v0.3.8 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/grpc v1.50.1 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
