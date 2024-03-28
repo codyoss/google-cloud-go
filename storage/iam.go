@@ -53,7 +53,7 @@ func (c *iamClient) GetWithVersion(ctx context.Context, resource string, request
 }
 
 func (c *iamClient) Set(ctx context.Context, resource string, p *iampb.Policy) (err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/storage.IAM.Set")
+	ctx = trace.StartSpan(ctx, "cloud.google.com/go/storage.IAM.asdfasdfSet")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	isIdempotent := len(p.Etag) > 0
