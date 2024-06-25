@@ -61,10 +61,14 @@ type DefaultOptions struct {
 	// specified all other options are ignored. Defaults to a
 	// [slog.JSONHandler].
 	Handler slog.Handler
-	// AddSource causes the handler to compute the source code position
+	// EnableSourceInfo causes the handler to compute the source code position
 	// of the log statement and appends it to each log event. Defaults to
 	// false.
-	AddSource bool
+	EnableSourceInfo bool
+	// EnableLogging turns on logging.
+	EnableLogging bool
+	// EnableSensitiveLogging turns on logging of more sensitive data.
+	EnableSensitiveLogging bool
 }
 
 // SetDefaults configures all logging that originates from this package. This
@@ -89,7 +93,7 @@ func SetDefaults(opts *DefaultOptions) {
 		}
 		if handler == nil {
 			handler = slog.NewJSONHandler(writer, &slog.HandlerOptions{
-				AddSource:   opts.AddSource,
+				AddSource:   opts.EnableSourceInfo,
 				Level:       level,
 				ReplaceAttr: replaceAttr,
 			})
@@ -98,6 +102,10 @@ func SetDefaults(opts *DefaultOptions) {
 		// Parse environment variables
 		loggingEnabled, _ = strconv.ParseBool(os.Getenv(enabledEnvVar))
 		sensitiveLoggingEnabled, _ = strconv.ParseBool(os.Getenv(enabledSensitiveEnvVar))
+		// Also honor code settings
+		loggingEnabled = loggingEnabled || opts.EnableLogging
+		sensitiveLoggingEnabled = sensitiveLoggingEnabled || opts.EnableSensitiveLogging
+
 		ss := strings.Split(strings.TrimSpace(os.Getenv(systemsEnvVar)), ",")
 		systems = make(map[string]bool, len(ss))
 		for _, s := range ss {
