@@ -89,7 +89,7 @@ func SetDefaults(opts *DefaultOptions) {
 		}
 		if handler == nil {
 			handler = slog.NewJSONHandler(writer, &slog.HandlerOptions{
-				AddSource:   true,
+				AddSource:   opts.AddSource,
 				Level:       level,
 				ReplaceAttr: replaceAttr,
 			})
@@ -146,7 +146,10 @@ func HTTPRequest(req *http.Request, payload []byte) slog.LogValuer {
 	if req == nil {
 		return lazyLogValuer[*http.Request]{}
 	}
-	return lazyLogValuer[*request]{Value: &request{}}
+	return lazyLogValuer[*request]{Value: &request{
+		req:     req,
+		payload: payload,
+	}}
 }
 
 // HTTPResponse returns a lazily evaluated [slog.LogValuer] for a
