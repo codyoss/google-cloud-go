@@ -299,7 +299,7 @@ func fetchToken(ctx context.Context, o *Options3LO, v url.Values) (*Token, strin
 	}
 
 	// Make request
-	logger.DebugContext(ctx, "token fetch", "request", clog.HTTPRequest(req, []byte(v.Encode())))
+	logger.DebugContext(ctx, "token fetch 3LO", "request", clog.HTTPRequest(req, []byte(v.Encode())))
 	r, err := o.client().Do(req.WithContext(ctx))
 	if err != nil {
 		return nil, refreshToken, err
@@ -309,7 +309,7 @@ func fetchToken(ctx context.Context, o *Options3LO, v url.Values) (*Token, strin
 	if err != nil {
 		return nil, refreshToken, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
-	logger.DebugContext(ctx, "token response", "response", clog.HTTPResponse(r, body))
+	logger.DebugContext(ctx, "token response 3LO", "response", clog.HTTPResponse(r, body))
 
 	failureStatus := r.StatusCode < 200 || r.StatusCode > 299
 	tokError := &Error{

@@ -32,6 +32,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"cloud.google.com/go/clog"
 )
 
 const (
@@ -303,6 +305,13 @@ func NewClient(c *http.Client) *Client {
 // getETag returns a value from the metadata service as well as the associated ETag.
 // This func is otherwise equivalent to Get.
 func (c *Client) getETag(ctx context.Context, suffix string) (value, etag string, err error) {
+	logger := clog.New(nil)
+	if strings.HasSuffix(suffix, "/token") {
+		// If we are logging token related called use the auth sub-system
+		logger = clog.New(&clog.Options{
+			System: clog.AuthSystemKey,
+		})
+	}
 	// Using a fixed IP makes it very difficult to spoof the metadata service in
 	// a container, which is an important use-case for local testing of cloud
 	// deployments. To enable spoofing of the metadata service, the environment
@@ -329,6 +338,7 @@ func (c *Client) getETag(ctx context.Context, suffix string) (value, etag string
 	var reqErr error
 	retryer := newRetryer()
 	for {
+		logger.DebugContext(ctx, "request to metadata service", "request", clog.HTTPRequest(req, nil))
 		res, reqErr = c.hc.Do(req)
 		var code int
 		if res != nil {
@@ -353,6 +363,7 @@ func (c *Client) getETag(ctx context.Context, suffix string) (value, etag string
 	if err != nil {
 		return "", "", err
 	}
+	logger.DebugContext(ctx, "response from metadata service", "response", clog.HTTPResponse(res, all))
 	if res.StatusCode != 200 {
 		return "", "", &Error{Code: res.StatusCode, Message: string(all)}
 	}
