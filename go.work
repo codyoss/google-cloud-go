@@ -1,4 +1,4 @@
-go 1.20
+go 1.21
 
 use (
 	.
@@ -87,6 +87,7 @@ use (
 	./internal/aliasfix
 	./internal/aliasgen
 	./internal/carver
+	./internal/cloguserexamples
 	./internal/examples/fake
 	./internal/examples/mock
 	./internal/gapicgen
