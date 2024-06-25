@@ -109,6 +109,7 @@ func (o *Options) Token(ctx context.Context) (*auth.Token, error) {
 	if err := setAuthHeader(ctx, o.Tp, req); err != nil {
 		return nil, err
 	}
+	// TODO(codyoss): add similar logging for auth
 	resp, body, err := internal.DoRequest(o.Client, req)
 	if err != nil {
 		return nil, fmt.Errorf("credentials: unable to generate access token: %w", err)

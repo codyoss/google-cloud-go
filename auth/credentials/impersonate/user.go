@@ -129,6 +129,7 @@ func (u userTokenProvider) signJWT(ctx context.Context) (string, error) {
 		return "", fmt.Errorf("impersonate: unable to create request: %w", err)
 	}
 	req.Header.Set("Content-Type", "application/json")
+	// TODO(codyoss): add similar logging for auth
 	resp, body, err := internal.DoRequest(u.client, req)
 	if err != nil {
 		return "", fmt.Errorf("impersonate: unable to sign JWT: %w", err)
@@ -153,12 +154,10 @@ func (u userTokenProvider) exchangeToken(ctx context.Context, signedJWT string) 
 	if err != nil {
 		return nil, err
 	}
+	// TODO(codyoss): add similar logging for auth
 	resp, body, err := internal.DoRequest(u.client, req)
 	if err != nil {
-		return nil, fmt.Errorf("impersonate: unable to exchange token: %w", err)
-	}
-	if c := resp.StatusCode; c < 200 || c > 299 {
-		return nil, fmt.Errorf("impersonate: status code %d: %s", c, body)
+		return nil, fmt.Errorf("impersonate: status code %d: %s", resp.StatusCode, body)
 	}
 
 	var tokenResp exchangeTokenResponse

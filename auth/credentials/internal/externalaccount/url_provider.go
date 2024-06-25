@@ -48,6 +48,7 @@ func (sp *urlSubjectProvider) subjectToken(ctx context.Context) (string, error) 
 	for key, val := range sp.Headers {
 		req.Header.Add(key, val)
 	}
+	// TODO(codyoss): add similar logging for auth
 	resp, body, err := internal.DoRequest(sp.Client, req)
 	if err != nil {
 		return "", fmt.Errorf("credentials: invalid response when retrieving subject token: %w", err)

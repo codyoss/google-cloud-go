@@ -136,6 +136,7 @@ func (g gdchProvider) Token(ctx context.Context) (*auth.Token, error) {
 		return nil, err
 	}
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	// TODO(codyoss): add similar logging for auth
 	resp, body, err := internal.DoRequest(g.client, req)
 	if err != nil {
 		return nil, fmt.Errorf("credentials: cannot fetch token: %w", err)

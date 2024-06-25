@@ -1,6 +1,6 @@
 module cloud.google.com/go/internal/generated
 
-go 1.20
+go 1.21
 
 require (
 	cloud.google.com/go v0.115.0
@@ -102,7 +102,6 @@ require (
 	cloud.google.com/go/retail v1.17.0
 	cloud.google.com/go/run v1.3.7
 	cloud.google.com/go/scheduler v1.10.8
-	cloud.google.com/go/secretmanager v1.13.1
 	cloud.google.com/go/security v1.17.0
 	cloud.google.com/go/securitycenter v1.30.0
 	cloud.google.com/go/servicecontrol v1.11.1

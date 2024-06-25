@@ -18,6 +18,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"strconv"
 	"strings"
@@ -25,10 +26,12 @@ import (
 	"time"
 
 	"cloud.google.com/go/auth/internal"
+	"cloud.google.com/go/clog"
 )
 
 type cachingClient struct {
 	client *http.Client
+	logger *slog.Logger
 
 	// clock optionally specifies a func to return the current time.
 	// If nil, time.Now is used.
@@ -42,6 +45,7 @@ func newCachingClient(client *http.Client) *cachingClient {
 	return &cachingClient{
 		client: client,
 		certs:  make(map[string]*cachedResponse, 2),
+		logger: clog.New(&clog.Options{System: clog.AuthSystemKey}),
 	}
 }
 
@@ -58,10 +62,12 @@ func (c *cachingClient) getCert(ctx context.Context, url string) (*certResponse,
 	if err != nil {
 		return nil, err
 	}
+	c.logger.Log(ctx, clog.DynamicLevel(), "certificate fetch", "request", clog.HTTPRequest(req, nil))
 	resp, body, err := internal.DoRequest(c.client, req)
 	if err != nil {
 		return nil, err
 	}
+	c.logger.Log(ctx, clog.DynamicLevel(), "certificate response", "response", clog.HTTPResponse(resp, body))
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("idtoken: unable to retrieve cert, got status code %d", resp.StatusCode)
 	}

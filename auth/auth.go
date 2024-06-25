@@ -27,6 +27,7 @@ import (
 
 	"cloud.google.com/go/auth/internal"
 	"cloud.google.com/go/auth/internal/jwt"
+	"cloud.google.com/go/clog"
 )
 
 const (
@@ -512,6 +513,9 @@ type tokenProvider2LO struct {
 }
 
 func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
+	logger := clog.New(&clog.Options{
+		System: clog.AuthSystemKey,
+	})
 	pk, err := internal.ParseKey(tp.opts.PrivateKey)
 	if err != nil {
 		return nil, err
@@ -543,10 +547,13 @@ func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
 		return nil, err
 	}
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	logger.Log(ctx, clog.DynamicLevel(), "2LO token fetch", "request", clog.HTTPRequest(req, []byte(v.Encode())))
 	resp, body, err := internal.DoRequest(tp.Client, req)
 	if err != nil {
 		return nil, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
+	logger.Log(ctx, clog.DynamicLevel(), "2LO token response", "response", clog.HTTPResponse(resp, body))
+
 	if c := resp.StatusCode; c < http.StatusOK || c >= http.StatusMultipleChoices {
 		return nil, &Error{
 			Response: resp,

@@ -182,6 +182,7 @@ func (dts *downscopedTokenProvider) Token(ctx context.Context) (*auth.Token, err
 	form.Add("subject_token", tok.Value)
 	form.Add("options", string(b))
 
+	// TODO(codyoss): add similar logging for auth
 	req, err := http.NewRequestWithContext(ctx, "POST", dts.identityBindingEndpoint, strings.NewReader(form.Encode()))
 	if err != nil {
 		return nil, err
