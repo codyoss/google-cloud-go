@@ -27,6 +27,7 @@ import (
 
 	"cloud.google.com/go/auth/internal"
 	"cloud.google.com/go/auth/internal/jwt"
+	"cloud.google.com/go/clog"
 )
 
 const (
@@ -512,6 +513,9 @@ type tokenProvider2LO struct {
 }
 
 func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
+	logger := clog.New(&clog.Options{
+		System: clog.AuthSystemKey,
+	})
 	pk, err := internal.ParseKey(tp.opts.PrivateKey)
 	if err != nil {
 		return nil, err
@@ -538,7 +542,15 @@ func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
 	v := url.Values{}
 	v.Set("grant_type", defaultGrantType)
 	v.Set("assertion", payload)
-	resp, err := tp.Client.PostForm(tp.opts.TokenURL, v)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", tp.opts.TokenURL, strings.NewReader(v.Encode()))
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+
+	logger.DebugContext(ctx, "token fetch", "request", clog.HTTPRequest(req, []byte(v.Encode())))
+	resp, err := tp.Client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
@@ -547,6 +559,8 @@ func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
 	if err != nil {
 		return nil, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
+	logger.DebugContext(ctx, "token response", "response", clog.HTTPResponse(resp, body))
+
 	if c := resp.StatusCode; c < http.StatusOK || c >= http.StatusMultipleChoices {
 		return nil, &Error{
 			Response: resp,

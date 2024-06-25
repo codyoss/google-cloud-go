@@ -28,6 +28,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/auth/internal"
+	"cloud.google.com/go/clog"
 )
 
 // AuthorizationHandler is a 3-legged-OAuth helper that prompts the user for
@@ -276,6 +277,9 @@ func (tp tokenProviderWithHandler) Token(ctx context.Context) (*Token, error) {
 
 // fetchToken returns a Token, refresh token, and/or an error.
 func fetchToken(ctx context.Context, o *Options3LO, v url.Values) (*Token, string, error) {
+	logger := clog.New(&clog.Options{
+		System: clog.AuthSystemKey,
+	})
 	var refreshToken string
 	if o.AuthStyle == StyleInParams {
 		if o.ClientID != "" {
@@ -295,6 +299,7 @@ func fetchToken(ctx context.Context, o *Options3LO, v url.Values) (*Token, strin
 	}
 
 	// Make request
+	logger.DebugContext(ctx, "token fetch", "request", clog.HTTPRequest(req, []byte(v.Encode())))
 	r, err := o.client().Do(req.WithContext(ctx))
 	if err != nil {
 		return nil, refreshToken, err
@@ -304,6 +309,7 @@ func fetchToken(ctx context.Context, o *Options3LO, v url.Values) (*Token, strin
 	if err != nil {
 		return nil, refreshToken, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
+	logger.DebugContext(ctx, "token response", "response", clog.HTTPResponse(r, body))
 
 	failureStatus := r.StatusCode < 200 || r.StatusCode > 299
 	tokError := &Error{
