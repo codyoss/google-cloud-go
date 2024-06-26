@@ -145,6 +145,10 @@ func SensitiveString(s string) string {
 	return s
 }
 
+func IsSensitiveLoggingEnabled() bool {
+	return sensitiveLoggingEnabled
+}
+
 type gcHandler struct {
 	system string
 	h      slog.Handler

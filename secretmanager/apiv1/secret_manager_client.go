@@ -26,6 +26,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/clog"
+	"cloud.google.com/go/clog/cloggrpc"
 	secretmanagerpb "cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 	gax "github.com/googleapis/gax-go/v2"
 	"google.golang.org/api/googleapi"
@@ -403,7 +404,9 @@ func (c *gRPCClient) ListSecrets(ctx context.Context, req *secretmanagerpb.ListS
 		}
 		err := gax.Invoke(ctx, func(ctx context.Context, settings gax.CallSettings) error {
 			var err error
+			c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.ListSecrets", "request", cloggrpc.ProtoMessageRequest(ctx, req))
 			resp, err = c.client.ListSecrets(ctx, req, settings.GRPC...)
+			c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.ListSecrets", "request", cloggrpc.ProtoMessageResponse(resp))
 			return err
 		}, opts...)
 		if err != nil {
@@ -438,7 +441,9 @@ func (c *gRPCClient) CreateSecret(ctx context.Context, req *secretmanagerpb.Crea
 	var resp *secretmanagerpb.Secret
 	err := gax.Invoke(ctx, func(ctx context.Context, settings gax.CallSettings) error {
 		var err error
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret", "request", cloggrpc.ProtoMessageRequest(ctx, req))
 		resp, err = c.client.CreateSecret(ctx, req, settings.GRPC...)
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret", "request", cloggrpc.ProtoMessageResponse(resp))
 		return err
 	}, opts...)
 	if err != nil {
@@ -456,7 +461,9 @@ func (c *gRPCClient) AddSecretVersion(ctx context.Context, req *secretmanagerpb.
 	var resp *secretmanagerpb.SecretVersion
 	err := gax.Invoke(ctx, func(ctx context.Context, settings gax.CallSettings) error {
 		var err error
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion", "request", cloggrpc.ProtoMessageRequest(ctx, req))
 		resp, err = c.client.AddSecretVersion(ctx, req, settings.GRPC...)
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion", "request", cloggrpc.ProtoMessageResponse(resp))
 		return err
 	}, opts...)
 	if err != nil {
@@ -474,7 +481,9 @@ func (c *gRPCClient) GetSecret(ctx context.Context, req *secretmanagerpb.GetSecr
 	var resp *secretmanagerpb.Secret
 	err := gax.Invoke(ctx, func(ctx context.Context, settings gax.CallSettings) error {
 		var err error
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.GetSecret", "request", cloggrpc.ProtoMessageRequest(ctx, req))
 		resp, err = c.client.GetSecret(ctx, req, settings.GRPC...)
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.GetSecret", "request", cloggrpc.ProtoMessageResponse(resp))
 		return err
 	}, opts...)
 	if err != nil {
@@ -492,7 +501,9 @@ func (c *gRPCClient) AccessSecretVersion(ctx context.Context, req *secretmanager
 	var resp *secretmanagerpb.AccessSecretVersionResponse
 	err := gax.Invoke(ctx, func(ctx context.Context, settings gax.CallSettings) error {
 		var err error
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion", "request", cloggrpc.ProtoMessageRequest(ctx, req))
 		resp, err = c.client.AccessSecretVersion(ctx, req, settings.GRPC...)
+		c.l.DebugContext(ctx, "api request", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion", "request", cloggrpc.ProtoMessageResponse(resp))
 		return err
 	}, opts...)
 	if err != nil {
@@ -653,7 +664,6 @@ func (c *restClient) CreateSecret(ctx context.Context, req *secretmanagerpb.Crea
 			return err
 		}
 		c.l.DebugContext(ctx, "api response", "serviceName", "secretmanager", "rpcName", "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret", "response", clog.HTTPResponse(httpRsp, buf))
-
 
 		if err := unm.Unmarshal(buf, resp); err != nil {
 			return err
