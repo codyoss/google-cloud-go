@@ -2,17 +2,14 @@ package clog
 
 import (
 	"bytes"
-	"context"
 	"encoding/json"
 	"fmt"
 	"io"
 	"log/slog"
 	"net/http"
-	"os"
-	"strconv"
 	"strings"
-	"sync"
-	"time"
+
+	"cloud.google.com/go/clog/internal"
 )
 
 const (
@@ -21,33 +18,6 @@ const (
 	// ClientSystemKey is the system key used for logs originating from client
 	// libraries.
 	ClientSystemKey = "client"
-)
-
-const (
-	// determines if logging is enabled
-	enabledEnvVar = "GOOGLE_SDK_DEBUG_LOGGING"
-	// determines if sensitive logging is enabled
-	enabledSensitiveEnvVar = "GOOGLE_SDK_DEBUG_LOGGING_SENSITIVE"
-	// determines which systems
-	systemsEnvVar = "GOOGLE_SDK_DEBUG_LOGGING_SYSTEMS"
-
-	googLvlKey    = "severity"
-	googMsgKey    = "message"
-	googSourceKey = "sourceLocation"
-	googTimeKey   = "timestamp"
-
-	redactedValue = "[redacted]"
-)
-
-var (
-	// configureLoggingOnce is set when the first [slog.Logger] is created from
-	// calling [New] or when [SetDefaults] is called. This freezes all variables
-	// below:
-	configureLoggingOnce    sync.Once
-	loggingEnabled          bool
-	sensitiveLoggingEnabled bool
-	handler                 slog.Handler
-	systems                 map[string]bool
 )
 
 // DefaultOptions used to configure global log settings.
@@ -71,56 +41,26 @@ type DefaultOptions struct {
 	EnableSensitiveLogging bool
 }
 
+func (o *DefaultOptions) toInternal() *internal.DefaultOptions {
+	io := &internal.DefaultOptions{}
+	if o == nil {
+		return io
+	}
+	io.Level = o.Level
+	io.Writer = o.Writer
+	io.Handler = o.Handler
+	io.EnableSourceInfo = o.EnableSourceInfo
+	io.EnableLogging = o.EnableLogging
+	io.EnableSensitiveLogging = o.EnableSensitiveLogging
+	return io
+}
+
 // SetDefaults configures all logging that originates from this package. This
 // function must be called before any logger are instantiated with [New].
 // This function may be called only once, calling it subsequent times will have
 // no effect.
 func SetDefaults(opts *DefaultOptions) {
-	configureLoggingOnce.Do(func() {
-		// Set Logger Defaults
-		if opts == nil {
-			opts = &DefaultOptions{}
-		}
-		level := opts.Level
-		writer := opts.Writer
-		handler = opts.Handler
-
-		if level == nil {
-			level = slog.LevelDebug
-		}
-		if writer == nil {
-			writer = os.Stderr
-		}
-		if handler == nil {
-			handler = slog.NewJSONHandler(writer, &slog.HandlerOptions{
-				AddSource:   opts.EnableSourceInfo,
-				Level:       level,
-				ReplaceAttr: replaceAttr,
-			})
-		}
-
-		// Parse environment variables
-		loggingEnabled, _ = strconv.ParseBool(os.Getenv(enabledEnvVar))
-		sensitiveLoggingEnabled, _ = strconv.ParseBool(os.Getenv(enabledSensitiveEnvVar))
-		// Also honor code settings
-		loggingEnabled = loggingEnabled || opts.EnableLogging
-		sensitiveLoggingEnabled = sensitiveLoggingEnabled || opts.EnableSensitiveLogging
-
-		ss := strings.Split(strings.TrimSpace(os.Getenv(systemsEnvVar)), ",")
-		systems = make(map[string]bool, len(ss))
-		for _, s := range ss {
-			cleanString := strings.ToLower(strings.TrimSpace(s))
-			if cleanString == "" {
-				continue
-			}
-			systems[strings.ToLower(strings.TrimSpace(s))] = true
-		}
-		if len(systems) == 0 {
-			// enable client and auth by default if not configured
-			systems[ClientSystemKey] = true
-			systems[AuthSystemKey] = true
-		}
-	})
+	internal.SetDefaults(opts.toInternal())
 }
 
 // Options used to configure [slog.Logger] returned by [New].
@@ -142,44 +82,35 @@ func New(opts *Options) *slog.Logger {
 			System: ClientSystemKey,
 		}
 	}
-	h := gcHandler{
-		system: opts.System,
-		h:      handler,
+	sys := opts.System
+	if sys == "" {
+		sys = ClientSystemKey
 	}
-	return slog.New(h)
+	return slog.New(internal.NewHandler(sys))
 }
 
 // HTTPRequest returns a lazily evaluated [slog.LogValuer] for a [http.Request].
 func HTTPRequest(req *http.Request, payload []byte) slog.LogValuer {
-	if req == nil {
-		return lazyLogValuer[*http.Request]{}
-	}
-	return lazyLogValuer[*request]{Value: &request{
+	return &request{
 		req:     req,
 		payload: payload,
-	}}
+	}
 }
 
 // HTTPResponse returns a lazily evaluated [slog.LogValuer] for a
 // [http.Response].
 func HTTPResponse(resp *http.Response, payload []byte) slog.LogValuer {
-	if resp == nil {
-		return lazyLogValuer[*http.Request]{}
-	}
-	return lazyLogValuer[*response]{Value: &response{
+	return &response{
 		resp:    resp,
 		payload: payload,
-	}}
+	}
 }
 
 // SensitiveString returns a string that is only logged if
 // GOOGLE_SDK_DEBUG_LOGGING_SENSITIVE and GOOGLE_SDK_DEBUG_LOGGING are both
 // true. If not, the returned string is `[redacted]`.
 func SensitiveString(s string) string {
-	if !sensitiveLoggingEnabled {
-		return redactedValue
-	}
-	return s
+	return internal.SensitiveString(s)
 }
 
 type request struct {
@@ -187,96 +118,45 @@ type request struct {
 	payload []byte
 }
 
+func (r *request) LogValue() slog.Value {
+	if r == nil || r.req == nil {
+		return slog.Value{}
+	}
+	var headerAttr []slog.Attr
+	for k, val := range r.req.Header {
+		headerAttr = append(headerAttr, slog.String(k, SensitiveString(strings.Join(val, ","))))
+	}
+	buf := &bytes.Buffer{}
+	json.Compact(buf, r.payload)
+	return slog.GroupValue(
+		slog.String("method", r.req.Method),
+		slog.String("url", SensitiveString(r.req.URL.String())),
+		slog.Any("headers", headerAttr),
+		slog.String("payload", SensitiveString(buf.String())),
+	)
+}
+
 type response struct {
 	resp    *http.Response
 	payload []byte
 }
 
-type lazyLogValuer[T any] struct {
-	Value T
-}
-
-func (l lazyLogValuer[T]) LogValue() slog.Value {
-	switch v := any(l.Value).(type) {
-	case *request:
-		if v == nil || v.req == nil {
-			return slog.Value{}
-		}
-		var headerAttr []slog.Attr
-		for k, val := range v.req.Header {
-			headerAttr = append(headerAttr, slog.String(k, SensitiveString(strings.Join(val, ","))))
-		}
-		buf := &bytes.Buffer{}
-		json.Compact(buf, v.payload)
-		return slog.GroupValue(
-			slog.String("method", v.req.Method),
-			slog.String("url", SensitiveString(v.req.URL.String())),
-			slog.Any("headers", headerAttr),
-			slog.String("payload", SensitiveString(buf.String())),
-		)
-	case *response:
-		if v == nil {
-			return slog.Value{}
-		}
-		var headerAttr []slog.Attr
-		for k, v := range v.resp.Header {
-			headerAttr = append(headerAttr, slog.String(k, SensitiveString(strings.Join(v, ","))))
-		}
-		buf := &bytes.Buffer{}
-		json.Compact(buf, v.payload)
-		return slog.GroupValue(
-			slog.String("status", fmt.Sprint(v.resp.StatusCode)),
-			slog.Any("headers", headerAttr),
-			slog.String("payload", SensitiveString(buf.String())),
-		)
-	default:
+func (r *response) LogValue() slog.Value {
+	if r == nil {
 		return slog.Value{}
 	}
-}
-
-type gcHandler struct {
-	system string
-	h      slog.Handler
-}
-
-// Enabled determines if logging should be enabled in the Go Cloud SDK by checking
-// if:
-//   - GOOGLE_SDK_DEBUG_LOGGING` is true
-//   - the log level should be logged
-//   - the system is configured to log
-func (g gcHandler) Enabled(ctx context.Context, lvl slog.Level) bool {
-	return loggingEnabled && g.h.Enabled(ctx, lvl) && systems[g.system]
-}
-
-func (g gcHandler) Handle(ctx context.Context, r slog.Record) error {
-	r.AddAttrs(slog.String("system", g.system))
-	return g.h.Handle(ctx, r)
-}
-
-func (g gcHandler) WithAttrs(a []slog.Attr) slog.Handler { return g.h.WithAttrs(a) }
-
-func (g gcHandler) WithGroup(name string) slog.Handler { return g.h.WithGroup(name) }
-
-// replaceAttr remaps default Go logging keys to match what is expected in
-// cloud logging.
-func replaceAttr(groups []string, a slog.Attr) slog.Attr {
-	if groups == nil {
-		if a.Key == slog.LevelKey {
-			a.Key = googLvlKey
-			return a
-		} else if a.Key == slog.MessageKey {
-			a.Key = googMsgKey
-			return a
-		} else if a.Key == slog.SourceKey {
-			a.Key = googSourceKey
-			return a
-		} else if a.Key == slog.TimeKey {
-			a.Key = googTimeKey
-			if a.Value.Kind() == slog.KindTime {
-				a.Value = slog.StringValue(a.Value.Time().Format(time.RFC3339))
-			}
-			return a
-		}
+	var headerAttr []slog.Attr
+	for k, v := range r.resp.Header {
+		headerAttr = append(headerAttr, slog.String(k, SensitiveString(strings.Join(v, ","))))
 	}
-	return a
+	buf := &bytes.Buffer{}
+	if err := json.Compact(buf, r.payload); err != nil {
+		buf.Reset()
+		buf.Write(r.payload)
+	}
+	return slog.GroupValue(
+		slog.String("status", fmt.Sprint(r.resp.StatusCode)),
+		slog.Any("headers", headerAttr),
+		slog.String("payload", SensitiveString(buf.String())),
+	)
 }
