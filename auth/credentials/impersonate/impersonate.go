@@ -244,6 +244,7 @@ func (i impersonatedTokenProvider) Token(ctx context.Context) (*auth.Token, erro
 	}
 	req.Header.Set("Content-Type", "application/json")
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := i.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("impersonate: unable to generate access token: %w", err)

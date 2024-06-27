@@ -129,6 +129,7 @@ func (g gdchProvider) Token(ctx context.Context) (*auth.Token, error) {
 	v.Set("requested_token_type", requestTokenType)
 	v.Set("subject_token", payload)
 	v.Set("subject_token_type", subjectTokenType)
+	// TODO(codyoss): add similar logging for auth
 	resp, err := g.client.PostForm(g.tokenURL, v)
 	if err != nil {
 		return nil, fmt.Errorf("credentials: cannot fetch token: %w", err)

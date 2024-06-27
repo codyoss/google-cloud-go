@@ -194,6 +194,7 @@ func (sp *awsSubjectProvider) getAWSSessionToken(ctx context.Context) (string, e
 	}
 	req.Header.Set(awsIMDSv2SessionTTLHeader, awsIMDSv2SessionTTL)
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := sp.Client.Do(req)
 	if err != nil {
 		return "", err
@@ -234,6 +235,7 @@ func (sp *awsSubjectProvider) getRegion(ctx context.Context, headers map[string]
 		req.Header.Add(name, value)
 	}
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := sp.Client.Do(req)
 	if err != nil {
 		return "", err
@@ -300,6 +302,7 @@ func (sp *awsSubjectProvider) getMetadataSecurityCredentials(ctx context.Context
 		req.Header.Add(name, value)
 	}
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := sp.Client.Do(req)
 	if err != nil {
 		return result, err
@@ -329,6 +332,7 @@ func (sp *awsSubjectProvider) getMetadataRoleName(ctx context.Context, headers m
 		req.Header.Add(name, value)
 	}
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := sp.Client.Do(req)
 	if err != nil {
 		return "", err

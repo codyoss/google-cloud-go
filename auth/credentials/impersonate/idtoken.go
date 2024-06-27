@@ -167,6 +167,7 @@ func (i impersonatedIDTokenProvider) Token(ctx context.Context) (*auth.Token, er
 		return nil, fmt.Errorf("impersonate: unable to create request: %w", err)
 	}
 	req.Header.Set("Content-Type", "application/json")
+	// TODO(codyoss): add similar logging for auth
 	resp, err := i.client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("impersonate: unable to generate ID token: %w", err)

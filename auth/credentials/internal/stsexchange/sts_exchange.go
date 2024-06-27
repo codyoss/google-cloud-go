@@ -93,6 +93,7 @@ func doRequest(ctx context.Context, opts *Options, data url.Values) (*TokenRespo
 	}
 	req.Header.Set("Content-Length", strconv.Itoa(len(encodedData)))
 
+	// TODO(codyoss): add similar logging for auth
 	resp, err := opts.Client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("credentials: invalid response from Secure Token Server: %w", err)

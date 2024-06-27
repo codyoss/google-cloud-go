@@ -549,7 +549,7 @@ func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
 	}
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 
-	logger.DebugContext(ctx, "token fetch 2LO", "request", clog.HTTPRequest(req, []byte(v.Encode())))
+	logger.DebugContext(ctx, "2LO token fetch", "request", clog.HTTPRequest(req, []byte(v.Encode())))
 	resp, err := tp.Client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("auth: cannot fetch token: %w", err)
@@ -559,7 +559,7 @@ func (tp tokenProvider2LO) Token(ctx context.Context) (*Token, error) {
 	if err != nil {
 		return nil, fmt.Errorf("auth: cannot fetch token: %w", err)
 	}
-	logger.DebugContext(ctx, "token response 2LO", "response", clog.HTTPResponse(resp, body))
+	logger.DebugContext(ctx, "2LO token response", "response", clog.HTTPResponse(resp, body))
 
 	if c := resp.StatusCode; c < http.StatusOK || c >= http.StatusMultipleChoices {
 		return nil, &Error{
