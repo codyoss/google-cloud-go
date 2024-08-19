@@ -94,6 +94,9 @@ type Options struct {
 	// InternalOptions are NOT meant to be set directly by consumers of this
 	// package, they should only be set by generated client code.
 	InternalOptions *InternalOptions
+
+	// used to share the same creds across connections in a pool
+	sharedCreds grpccreds.PerRPCCredentials
 }
 
 // client returns the client a user set for the detect options or nil if one was
@@ -188,27 +191,32 @@ func Dial(ctx context.Context, secure bool, opts *Options) (GRPCClientConnPool, 
 		return nil, err
 	}
 	if opts.PoolSize <= 1 {
-		conn, err := dial(ctx, secure, opts)
+		resp, err := dial(ctx, secure, opts)
 		if err != nil {
 			return nil, err
 		}
-		return &singleConnPool{conn}, nil
+		return &singleConnPool{resp.conn}, nil
 	}
 	pool := &roundRobinConnPool{}
 	for i := 0; i < opts.PoolSize; i++ {
-		conn, err := dial(ctx, secure, opts)
+		resp, err := dial(ctx, secure, opts)
 		if err != nil {
 			// ignore close error, if any
 			defer pool.Close()
 			return nil, err
 		}
-		pool.conns = append(pool.conns, conn)
+		pool.conns = append(pool.conns, resp.conn)
 	}
 	return pool, nil
 }
 
+type dialResponse struct {
+	conn  *grpc.ClientConn
+	creds *auth.Credentials
+}
+
 // return a GRPCClientConnPool if pool == 1 or else a pool of of them if >1
-func dial(ctx context.Context, secure bool, opts *Options) (*grpc.ClientConn, error) {
+func dial(ctx context.Context, secure bool, opts *Options) (*dialResponse, error) {
 	tOpts := &transport.Options{
 		Endpoint:           opts.Endpoint,
 		ClientCertProvider: opts.ClientCertProvider,
@@ -241,14 +249,15 @@ func dial(ctx context.Context, secure bool, opts *Options) (*grpc.ClientConn, er
 		return nil, err
 	}
 
-	if opts.APIKey != "" {
-		grpcOpts = append(grpcOpts,
-			grpc.WithPerRPCCredentials(&grpcKeyProvider{
-				apiKey:   opts.APIKey,
-				metadata: opts.Metadata,
-				secure:   secure,
-			}),
-		)
+	var rpcCreds grpccreds.PerRPCCredentials
+	if opts.sharedCreds != nil {
+		rpcCreds = opts.sharedCreds
+	} else if opts.APIKey != "" {
+		rpcCreds = &grpcKeyProvider{
+			apiKey:   opts.APIKey,
+			metadata: opts.Metadata,
+			secure:   secure,
+		}
 	} else if !opts.DisableAuthentication {
 		metadata := opts.Metadata
 
@@ -273,16 +282,22 @@ func dial(ctx context.Context, secure bool, opts *Options) (*grpc.ClientConn, er
 			}
 			metadata[quotaProjectHeaderKey] = qp
 		}
-		grpcOpts = append(grpcOpts,
-			grpc.WithPerRPCCredentials(&grpcCredentialsProvider{
-				creds:                creds,
-				metadata:             metadata,
-				clientUniverseDomain: opts.UniverseDomain,
-			}),
-		)
+		rpcCreds = &grpcCredentialsProvider{
+			creds:                creds,
+			metadata:             metadata,
+			clientUniverseDomain: opts.UniverseDomain,
+		}
 
 		// Attempt Direct Path
-		grpcOpts, endpoint = configureDirectPath(grpcOpts, opts, endpoint, creds)
+		var useDirectPath bool
+		grpcOpts, endpoint, useDirectPath = configureDirectPath(grpcOpts, opts, endpoint, creds)
+		if useDirectPath {
+			// don't share dirctpath creds between credentials
+			rpcCreds = nil
+		}
+	}
+	if rpcCreds != nil {
+		grpcOpts = append(grpcOpts, )
 	}
 
 	// Add tracing, but before the other options, so that clients can override the
@@ -291,7 +306,13 @@ func dial(ctx context.Context, secure bool, opts *Options) (*grpc.ClientConn, er
 	grpcOpts = addOCStatsHandler(grpcOpts, opts)
 	grpcOpts = append(grpcOpts, opts.GRPCDialOpts...)
 
-	return grpc.DialContext(ctx, endpoint, grpcOpts...)
+	conn, err := grpc.DialContext(ctx, endpoint, grpcOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return &dialResponse{
+		conn: conn,
+	}, nil
 }
 
 // grpcKeyProvider satisfies https://pkg.go.dev/google.golang.org/grpc/credentials#PerRPCCredentials.

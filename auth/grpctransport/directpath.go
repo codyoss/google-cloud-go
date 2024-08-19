@@ -87,11 +87,13 @@ func isDirectPathXdsUsed(o *Options) bool {
 	return false
 }
 
-// configureDirectPath returns some dial options and an endpoint to use if the
-// configuration allows the use of direct path. If it does not the provided
-// grpcOpts and endpoint are returned.
-func configureDirectPath(grpcOpts []grpc.DialOption, opts *Options, endpoint string, creds *auth.Credentials) ([]grpc.DialOption, string) {
+// configureDirectPath returns some dial options, wether direct path should be
+// used, and an endpoint to use if the configuration allows the use of direct
+// path. If it does not, the provided grpcOpts and endpoint are returned.
+func configureDirectPath(grpcOpts []grpc.DialOption, opts *Options, endpoint string, creds *auth.Credentials) ([]grpc.DialOption, string, bool) {
+	var useDirectPath bool
 	if isDirectPathEnabled(endpoint, opts) && metadata.OnGCE() && isTokenProviderDirectPathCompatible(creds, opts) {
+		useDirectPath = true
 		// Overwrite all of the previously specific DialOptions, DirectPath uses its own set of credentials and certificates.
 		grpcOpts = []grpc.DialOption{
 			grpc.WithCredentialsBundle(grpcgoogle.NewDefaultCredentialsWithOptions(grpcgoogle.DefaultCredentialsOptions{PerRPCCreds: &grpcCredentialsProvider{creds: creds}}))}
@@ -119,5 +121,5 @@ func configureDirectPath(grpcOpts []grpc.DialOption, opts *Options, endpoint str
 		}
 		// TODO: add support for system parameters (quota project, request reason) via chained interceptor.
 	}
-	return grpcOpts, endpoint
+	return grpcOpts, endpoint, useDirectPath
 }
