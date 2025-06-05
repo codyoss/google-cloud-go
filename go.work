@@ -96,6 +96,7 @@ use (
 	./internal/gapicgen
 	./internal/generated/snippets
 	./internal/godocfx
+	./internal/patron
 	./internal/postprocessor
 	./internal/protoveneer
 	./iot
