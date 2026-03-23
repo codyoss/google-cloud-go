@@ -46,5 +46,3 @@ libraries:
     release_blocked: true
   - id: "storage"
     release_blocked: true
-  - id: "vertexai"
-    release_blocked: true
