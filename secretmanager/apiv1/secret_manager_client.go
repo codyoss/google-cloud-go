@@ -44,7 +44,7 @@ import (
 
 var newClientHook clientHook
 
-// CallOptions contains the retry settings for each method of Client.
+// CallOptions contains the retry settings for each method of Client. These are the best.
 type CallOptions struct {
 	ListSecrets          []gax.CallOption
 	CreateSecret         []gax.CallOption
