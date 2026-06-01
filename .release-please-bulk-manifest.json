@@ -139,7 +139,7 @@
   "run": "1.21.0",
   "saasplatform": "0.8.0",
   "scheduler": "1.16.0",
-  "secretmanager": "1.20.0",
+  "secretmanager": "1.20.1",
   "securesourcemanager": "1.9.0",
   "security": "1.25.0",
   "securitycenter": "1.44.0",
