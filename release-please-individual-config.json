@@ -1,5 +1,5 @@
 {
-  "release-type": "go",
+  "release-type": "go-librarian",
   "include-component-in-tag": true,
   "tag-separator": "/",
   "plugins": [
