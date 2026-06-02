@@ -1,5 +1,5 @@
 {
-  "release-type": "go-librarian",
+  "release-type": "go",
   "include-component-in-tag": true,
   "tag-separator": "/",
   "plugins": [
@@ -41,7 +41,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datastore/admin/apiv1/snippet_metadata.google.datastore.admin.v1.json",
+          "path": "/internal/generated/snippets/datastore/admin/apiv1/snippet_metadata.google.datastore.admin.v1.json",
           "type": "json"
         }
       ]

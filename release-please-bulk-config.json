@@ -1,5 +1,5 @@
 {
-  "release-type": "go-librarian",
+  "release-type": "go",
   "include-component-in-tag": true,
   "tag-separator": "/",
   "plugins": [
@@ -11,7 +11,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/accessapproval/apiv1/snippet_metadata.google.cloud.accessapproval.v1.json",
+          "path": "/internal/generated/snippets/accessapproval/apiv1/snippet_metadata.google.cloud.accessapproval.v1.json",
           "type": "json"
         }
       ]
@@ -21,7 +21,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/accesscontextmanager/apiv1/snippet_metadata.google.identity.accesscontextmanager.v1.json",
+          "path": "/internal/generated/snippets/accesscontextmanager/apiv1/snippet_metadata.google.identity.accesscontextmanager.v1.json",
           "type": "json"
         }
       ]
@@ -31,7 +31,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/advisorynotifications/apiv1/snippet_metadata.google.cloud.advisorynotifications.v1.json",
+          "path": "/internal/generated/snippets/advisorynotifications/apiv1/snippet_metadata.google.cloud.advisorynotifications.v1.json",
           "type": "json"
         }
       ]
@@ -41,22 +41,22 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ai/generativelanguage/apiv1/snippet_metadata.google.ai.generativelanguage.v1.json",
+          "path": "/internal/generated/snippets/ai/generativelanguage/apiv1/snippet_metadata.google.ai.generativelanguage.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ai/generativelanguage/apiv1alpha/snippet_metadata.google.ai.generativelanguage.v1alpha.json",
+          "path": "/internal/generated/snippets/ai/generativelanguage/apiv1alpha/snippet_metadata.google.ai.generativelanguage.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ai/generativelanguage/apiv1beta/snippet_metadata.google.ai.generativelanguage.v1beta.json",
+          "path": "/internal/generated/snippets/ai/generativelanguage/apiv1beta/snippet_metadata.google.ai.generativelanguage.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ai/generativelanguage/apiv1beta2/snippet_metadata.google.ai.generativelanguage.v1beta2.json",
+          "path": "/internal/generated/snippets/ai/generativelanguage/apiv1beta2/snippet_metadata.google.ai.generativelanguage.v1beta2.json",
           "type": "json"
         }
       ]
@@ -66,12 +66,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/aiplatform/apiv1/snippet_metadata.google.cloud.aiplatform.v1.json",
+          "path": "/internal/generated/snippets/aiplatform/apiv1/snippet_metadata.google.cloud.aiplatform.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/aiplatform/apiv1beta1/snippet_metadata.google.cloud.aiplatform.v1beta1.json",
+          "path": "/internal/generated/snippets/aiplatform/apiv1beta1/snippet_metadata.google.cloud.aiplatform.v1beta1.json",
           "type": "json"
         }
       ]
@@ -81,17 +81,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/alloydb/apiv1/snippet_metadata.google.cloud.alloydb.v1.json",
+          "path": "/internal/generated/snippets/alloydb/apiv1/snippet_metadata.google.cloud.alloydb.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/alloydb/apiv1alpha/snippet_metadata.google.cloud.alloydb.v1alpha.json",
+          "path": "/internal/generated/snippets/alloydb/apiv1alpha/snippet_metadata.google.cloud.alloydb.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/alloydb/apiv1beta/snippet_metadata.google.cloud.alloydb.v1beta.json",
+          "path": "/internal/generated/snippets/alloydb/apiv1beta/snippet_metadata.google.cloud.alloydb.v1beta.json",
           "type": "json"
         }
       ]
@@ -101,7 +101,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/analytics/admin/apiv1alpha/snippet_metadata.google.analytics.admin.v1alpha.json",
+          "path": "/internal/generated/snippets/analytics/admin/apiv1alpha/snippet_metadata.google.analytics.admin.v1alpha.json",
           "type": "json"
         }
       ]
@@ -111,7 +111,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apigateway/apiv1/snippet_metadata.google.cloud.apigateway.v1.json",
+          "path": "/internal/generated/snippets/apigateway/apiv1/snippet_metadata.google.cloud.apigateway.v1.json",
           "type": "json"
         }
       ]
@@ -121,7 +121,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apigeeconnect/apiv1/snippet_metadata.google.cloud.apigeeconnect.v1.json",
+          "path": "/internal/generated/snippets/apigeeconnect/apiv1/snippet_metadata.google.cloud.apigeeconnect.v1.json",
           "type": "json"
         }
       ]
@@ -131,7 +131,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apigeeregistry/apiv1/snippet_metadata.google.cloud.apigeeregistry.v1.json",
+          "path": "/internal/generated/snippets/apigeeregistry/apiv1/snippet_metadata.google.cloud.apigeeregistry.v1.json",
           "type": "json"
         }
       ]
@@ -141,7 +141,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apihub/apiv1/snippet_metadata.google.cloud.apihub.v1.json",
+          "path": "/internal/generated/snippets/apihub/apiv1/snippet_metadata.google.cloud.apihub.v1.json",
           "type": "json"
         }
       ]
@@ -151,7 +151,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apikeys/apiv2/snippet_metadata.google.api.apikeys.v2.json",
+          "path": "/internal/generated/snippets/apikeys/apiv2/snippet_metadata.google.api.apikeys.v2.json",
           "type": "json"
         }
       ]
@@ -161,12 +161,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apiregistry/apiv1/snippet_metadata.google.cloud.apiregistry.v1.json",
+          "path": "/internal/generated/snippets/apiregistry/apiv1/snippet_metadata.google.cloud.apiregistry.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apiregistry/apiv1beta/snippet_metadata.google.cloud.apiregistry.v1beta.json",
+          "path": "/internal/generated/snippets/apiregistry/apiv1beta/snippet_metadata.google.cloud.apiregistry.v1beta.json",
           "type": "json"
         }
       ]
@@ -176,7 +176,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/appengine/apiv1/snippet_metadata.google.appengine.v1.json",
+          "path": "/internal/generated/snippets/appengine/apiv1/snippet_metadata.google.appengine.v1.json",
           "type": "json"
         }
       ]
@@ -186,7 +186,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apphub/apiv1/snippet_metadata.google.cloud.apphub.v1.json",
+          "path": "/internal/generated/snippets/apphub/apiv1/snippet_metadata.google.cloud.apphub.v1.json",
           "type": "json"
         }
       ]
@@ -196,7 +196,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/appoptimize/apiv1beta/snippet_metadata.google.cloud.appoptimize.v1beta.json",
+          "path": "/internal/generated/snippets/appoptimize/apiv1beta/snippet_metadata.google.cloud.appoptimize.v1beta.json",
           "type": "json"
         }
       ]
@@ -206,22 +206,22 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apps/events/subscriptions/apiv1/snippet_metadata.google.apps.events.subscriptions.v1.json",
+          "path": "/internal/generated/snippets/apps/events/subscriptions/apiv1/snippet_metadata.google.apps.events.subscriptions.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apps/events/subscriptions/apiv1beta/snippet_metadata.google.apps.events.subscriptions.v1beta.json",
+          "path": "/internal/generated/snippets/apps/events/subscriptions/apiv1beta/snippet_metadata.google.apps.events.subscriptions.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apps/meet/apiv2/snippet_metadata.google.apps.meet.v2.json",
+          "path": "/internal/generated/snippets/apps/meet/apiv2/snippet_metadata.google.apps.meet.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/apps/meet/apiv2beta/snippet_metadata.google.apps.meet.v2beta.json",
+          "path": "/internal/generated/snippets/apps/meet/apiv2beta/snippet_metadata.google.apps.meet.v2beta.json",
           "type": "json"
         }
       ]
@@ -231,7 +231,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/area120/tables/apiv1alpha1/snippet_metadata.google.area120.tables.v1alpha1.json",
+          "path": "/internal/generated/snippets/area120/tables/apiv1alpha1/snippet_metadata.google.area120.tables.v1alpha1.json",
           "type": "json"
         }
       ]
@@ -241,12 +241,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/artifactregistry/apiv1/snippet_metadata.google.devtools.artifactregistry.v1.json",
+          "path": "/internal/generated/snippets/artifactregistry/apiv1/snippet_metadata.google.devtools.artifactregistry.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/artifactregistry/apiv1beta2/snippet_metadata.google.devtools.artifactregistry.v1beta2.json",
+          "path": "/internal/generated/snippets/artifactregistry/apiv1beta2/snippet_metadata.google.devtools.artifactregistry.v1beta2.json",
           "type": "json"
         }
       ]
@@ -256,17 +256,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/asset/apiv1/snippet_metadata.google.cloud.asset.v1.json",
+          "path": "/internal/generated/snippets/asset/apiv1/snippet_metadata.google.cloud.asset.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/asset/apiv1p2beta1/snippet_metadata.google.cloud.asset.v1p2beta1.json",
+          "path": "/internal/generated/snippets/asset/apiv1p2beta1/snippet_metadata.google.cloud.asset.v1p2beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/asset/apiv1p5beta1/snippet_metadata.google.cloud.asset.v1p5beta1.json",
+          "path": "/internal/generated/snippets/asset/apiv1p5beta1/snippet_metadata.google.cloud.asset.v1p5beta1.json",
           "type": "json"
         }
       ]
@@ -276,12 +276,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/assuredworkloads/apiv1/snippet_metadata.google.cloud.assuredworkloads.v1.json",
+          "path": "/internal/generated/snippets/assuredworkloads/apiv1/snippet_metadata.google.cloud.assuredworkloads.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/assuredworkloads/apiv1beta1/snippet_metadata.google.cloud.assuredworkloads.v1beta1.json",
+          "path": "/internal/generated/snippets/assuredworkloads/apiv1beta1/snippet_metadata.google.cloud.assuredworkloads.v1beta1.json",
           "type": "json"
         }
       ]
@@ -291,7 +291,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/auditmanager/apiv1/snippet_metadata.google.cloud.auditmanager.v1.json",
+          "path": "/internal/generated/snippets/auditmanager/apiv1/snippet_metadata.google.cloud.auditmanager.v1.json",
           "type": "json"
         }
       ]
@@ -301,12 +301,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/automl/apiv1/snippet_metadata.google.cloud.automl.v1.json",
+          "path": "/internal/generated/snippets/automl/apiv1/snippet_metadata.google.cloud.automl.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/automl/apiv1beta1/snippet_metadata.google.cloud.automl.v1beta1.json",
+          "path": "/internal/generated/snippets/automl/apiv1beta1/snippet_metadata.google.cloud.automl.v1beta1.json",
           "type": "json"
         }
       ]
@@ -316,7 +316,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/backupdr/apiv1/snippet_metadata.google.cloud.backupdr.v1.json",
+          "path": "/internal/generated/snippets/backupdr/apiv1/snippet_metadata.google.cloud.backupdr.v1.json",
           "type": "json"
         }
       ]
@@ -326,7 +326,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/baremetalsolution/apiv2/snippet_metadata.google.cloud.baremetalsolution.v2.json",
+          "path": "/internal/generated/snippets/baremetalsolution/apiv2/snippet_metadata.google.cloud.baremetalsolution.v2.json",
           "type": "json"
         }
       ]
@@ -336,7 +336,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/batch/apiv1/snippet_metadata.google.cloud.batch.v1.json",
+          "path": "/internal/generated/snippets/batch/apiv1/snippet_metadata.google.cloud.batch.v1.json",
           "type": "json"
         }
       ]
@@ -346,27 +346,27 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/beyondcorp/appconnections/apiv1/snippet_metadata.google.cloud.beyondcorp.appconnections.v1.json",
+          "path": "/internal/generated/snippets/beyondcorp/appconnections/apiv1/snippet_metadata.google.cloud.beyondcorp.appconnections.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/beyondcorp/appconnectors/apiv1/snippet_metadata.google.cloud.beyondcorp.appconnectors.v1.json",
+          "path": "/internal/generated/snippets/beyondcorp/appconnectors/apiv1/snippet_metadata.google.cloud.beyondcorp.appconnectors.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/beyondcorp/appgateways/apiv1/snippet_metadata.google.cloud.beyondcorp.appgateways.v1.json",
+          "path": "/internal/generated/snippets/beyondcorp/appgateways/apiv1/snippet_metadata.google.cloud.beyondcorp.appgateways.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/beyondcorp/clientconnectorservices/apiv1/snippet_metadata.google.cloud.beyondcorp.clientconnectorservices.v1.json",
+          "path": "/internal/generated/snippets/beyondcorp/clientconnectorservices/apiv1/snippet_metadata.google.cloud.beyondcorp.clientconnectorservices.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/beyondcorp/clientgateways/apiv1/snippet_metadata.google.cloud.beyondcorp.clientgateways.v1.json",
+          "path": "/internal/generated/snippets/beyondcorp/clientgateways/apiv1/snippet_metadata.google.cloud.beyondcorp.clientgateways.v1.json",
           "type": "json"
         }
       ]
@@ -376,12 +376,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/biglake/apiv1/snippet_metadata.google.cloud.biglake.v1.json",
+          "path": "/internal/generated/snippets/biglake/apiv1/snippet_metadata.google.cloud.biglake.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/biglake/hive/apiv1beta/snippet_metadata.google.cloud.biglake.hive.v1beta.json",
+          "path": "/internal/generated/snippets/biglake/hive/apiv1beta/snippet_metadata.google.cloud.biglake.hive.v1beta.json",
           "type": "json"
         }
       ]
@@ -391,17 +391,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/billing/apiv1/snippet_metadata.google.cloud.billing.v1.json",
+          "path": "/internal/generated/snippets/billing/apiv1/snippet_metadata.google.cloud.billing.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/billing/budgets/apiv1/snippet_metadata.google.cloud.billing.budgets.v1.json",
+          "path": "/internal/generated/snippets/billing/budgets/apiv1/snippet_metadata.google.cloud.billing.budgets.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/billing/budgets/apiv1beta1/snippet_metadata.google.cloud.billing.budgets.v1beta1.json",
+          "path": "/internal/generated/snippets/billing/budgets/apiv1beta1/snippet_metadata.google.cloud.billing.budgets.v1beta1.json",
           "type": "json"
         }
       ]
@@ -411,12 +411,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/binaryauthorization/apiv1/snippet_metadata.google.cloud.binaryauthorization.v1.json",
+          "path": "/internal/generated/snippets/binaryauthorization/apiv1/snippet_metadata.google.cloud.binaryauthorization.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/binaryauthorization/apiv1beta1/snippet_metadata.google.cloud.binaryauthorization.v1beta1.json",
+          "path": "/internal/generated/snippets/binaryauthorization/apiv1beta1/snippet_metadata.google.cloud.binaryauthorization.v1beta1.json",
           "type": "json"
         }
       ]
@@ -426,7 +426,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/capacityplanner/apiv1beta/snippet_metadata.google.cloud.capacityplanner.v1beta.json",
+          "path": "/internal/generated/snippets/capacityplanner/apiv1beta/snippet_metadata.google.cloud.capacityplanner.v1beta.json",
           "type": "json"
         }
       ]
@@ -436,7 +436,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/certificatemanager/apiv1/snippet_metadata.google.cloud.certificatemanager.v1.json",
+          "path": "/internal/generated/snippets/certificatemanager/apiv1/snippet_metadata.google.cloud.certificatemanager.v1.json",
           "type": "json"
         }
       ]
@@ -446,12 +446,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ces/apiv1/snippet_metadata.google.cloud.ces.v1.json",
+          "path": "/internal/generated/snippets/ces/apiv1/snippet_metadata.google.cloud.ces.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ces/apiv1beta/snippet_metadata.google.cloud.ces.v1beta.json",
+          "path": "/internal/generated/snippets/ces/apiv1beta/snippet_metadata.google.cloud.ces.v1beta.json",
           "type": "json"
         }
       ]
@@ -461,7 +461,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/channel/apiv1/snippet_metadata.google.cloud.channel.v1.json",
+          "path": "/internal/generated/snippets/channel/apiv1/snippet_metadata.google.cloud.channel.v1.json",
           "type": "json"
         }
       ]
@@ -471,7 +471,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/chat/apiv1/snippet_metadata.google.chat.v1.json",
+          "path": "/internal/generated/snippets/chat/apiv1/snippet_metadata.google.chat.v1.json",
           "type": "json"
         }
       ]
@@ -481,7 +481,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/chronicle/apiv1/snippet_metadata.google.cloud.chronicle.v1.json",
+          "path": "/internal/generated/snippets/chronicle/apiv1/snippet_metadata.google.cloud.chronicle.v1.json",
           "type": "json"
         }
       ]
@@ -491,12 +491,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudbuild/apiv1/v2/snippet_metadata.google.devtools.cloudbuild.v1.json",
+          "path": "/internal/generated/snippets/cloudbuild/apiv1/v2/snippet_metadata.google.devtools.cloudbuild.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudbuild/apiv2/snippet_metadata.google.devtools.cloudbuild.v2.json",
+          "path": "/internal/generated/snippets/cloudbuild/apiv2/snippet_metadata.google.devtools.cloudbuild.v2.json",
           "type": "json"
         }
       ]
@@ -506,12 +506,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudcontrolspartner/apiv1/snippet_metadata.google.cloud.cloudcontrolspartner.v1.json",
+          "path": "/internal/generated/snippets/cloudcontrolspartner/apiv1/snippet_metadata.google.cloud.cloudcontrolspartner.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudcontrolspartner/apiv1beta/snippet_metadata.google.cloud.cloudcontrolspartner.v1beta.json",
+          "path": "/internal/generated/snippets/cloudcontrolspartner/apiv1beta/snippet_metadata.google.cloud.cloudcontrolspartner.v1beta.json",
           "type": "json"
         }
       ]
@@ -521,7 +521,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/clouddms/apiv1/snippet_metadata.google.cloud.clouddms.v1.json",
+          "path": "/internal/generated/snippets/clouddms/apiv1/snippet_metadata.google.cloud.clouddms.v1.json",
           "type": "json"
         }
       ]
@@ -531,7 +531,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudprofiler/apiv2/snippet_metadata.google.devtools.cloudprofiler.v2.json",
+          "path": "/internal/generated/snippets/cloudprofiler/apiv2/snippet_metadata.google.devtools.cloudprofiler.v2.json",
           "type": "json"
         }
       ]
@@ -541,12 +541,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudquotas/apiv1/snippet_metadata.google.api.cloudquotas.v1.json",
+          "path": "/internal/generated/snippets/cloudquotas/apiv1/snippet_metadata.google.api.cloudquotas.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudquotas/apiv1beta/snippet_metadata.google.api.cloudquotas.v1beta.json",
+          "path": "/internal/generated/snippets/cloudquotas/apiv1beta/snippet_metadata.google.api.cloudquotas.v1beta.json",
           "type": "json"
         }
       ]
@@ -556,7 +556,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudsecuritycompliance/apiv1/snippet_metadata.google.cloud.cloudsecuritycompliance.v1.json",
+          "path": "/internal/generated/snippets/cloudsecuritycompliance/apiv1/snippet_metadata.google.cloud.cloudsecuritycompliance.v1.json",
           "type": "json"
         }
       ]
@@ -566,17 +566,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudtasks/apiv2/snippet_metadata.google.cloud.tasks.v2.json",
+          "path": "/internal/generated/snippets/cloudtasks/apiv2/snippet_metadata.google.cloud.tasks.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudtasks/apiv2beta2/snippet_metadata.google.cloud.tasks.v2beta2.json",
+          "path": "/internal/generated/snippets/cloudtasks/apiv2beta2/snippet_metadata.google.cloud.tasks.v2beta2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/cloudtasks/apiv2beta3/snippet_metadata.google.cloud.tasks.v2beta3.json",
+          "path": "/internal/generated/snippets/cloudtasks/apiv2beta3/snippet_metadata.google.cloud.tasks.v2beta3.json",
           "type": "json"
         }
       ]
@@ -586,7 +586,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/commerce/consumer/procurement/apiv1/snippet_metadata.google.cloud.commerce.consumer.procurement.v1.json",
+          "path": "/internal/generated/snippets/commerce/consumer/procurement/apiv1/snippet_metadata.google.cloud.commerce.consumer.procurement.v1.json",
           "type": "json"
         }
       ]
@@ -596,12 +596,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/compute/apiv1/snippet_metadata.google.cloud.compute.v1.json",
+          "path": "/internal/generated/snippets/compute/apiv1/snippet_metadata.google.cloud.compute.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/compute/apiv1beta/snippet_metadata.google.cloud.compute.v1beta.json",
+          "path": "/internal/generated/snippets/compute/apiv1beta/snippet_metadata.google.cloud.compute.v1beta.json",
           "type": "json"
         }
       ],
@@ -614,12 +614,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/confidentialcomputing/apiv1/snippet_metadata.google.cloud.confidentialcomputing.v1.json",
+          "path": "/internal/generated/snippets/confidentialcomputing/apiv1/snippet_metadata.google.cloud.confidentialcomputing.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/confidentialcomputing/apiv1alpha1/snippet_metadata.google.cloud.confidentialcomputing.v1alpha1.json",
+          "path": "/internal/generated/snippets/confidentialcomputing/apiv1alpha1/snippet_metadata.google.cloud.confidentialcomputing.v1alpha1.json",
           "type": "json"
         }
       ]
@@ -629,7 +629,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/config/apiv1/snippet_metadata.google.cloud.config.v1.json",
+          "path": "/internal/generated/snippets/config/apiv1/snippet_metadata.google.cloud.config.v1.json",
           "type": "json"
         }
       ]
@@ -639,12 +639,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/configdelivery/apiv1/snippet_metadata.google.cloud.configdelivery.v1.json",
+          "path": "/internal/generated/snippets/configdelivery/apiv1/snippet_metadata.google.cloud.configdelivery.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/configdelivery/apiv1beta/snippet_metadata.google.cloud.configdelivery.v1beta.json",
+          "path": "/internal/generated/snippets/configdelivery/apiv1beta/snippet_metadata.google.cloud.configdelivery.v1beta.json",
           "type": "json"
         }
       ]
@@ -654,7 +654,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/contactcenterinsights/apiv1/snippet_metadata.google.cloud.contactcenterinsights.v1.json",
+          "path": "/internal/generated/snippets/contactcenterinsights/apiv1/snippet_metadata.google.cloud.contactcenterinsights.v1.json",
           "type": "json"
         }
       ]
@@ -664,7 +664,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/container/apiv1/snippet_metadata.google.container.v1.json",
+          "path": "/internal/generated/snippets/container/apiv1/snippet_metadata.google.container.v1.json",
           "type": "json"
         }
       ]
@@ -674,7 +674,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/containeranalysis/apiv1beta1/snippet_metadata.google.devtools.containeranalysis.v1beta1.json",
+          "path": "/internal/generated/snippets/containeranalysis/apiv1beta1/snippet_metadata.google.devtools.containeranalysis.v1beta1.json",
           "type": "json"
         }
       ]
@@ -684,22 +684,22 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datacatalog/apiv1/snippet_metadata.google.cloud.datacatalog.v1.json",
+          "path": "/internal/generated/snippets/datacatalog/apiv1/snippet_metadata.google.cloud.datacatalog.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datacatalog/apiv1beta1/snippet_metadata.google.cloud.datacatalog.v1beta1.json",
+          "path": "/internal/generated/snippets/datacatalog/apiv1beta1/snippet_metadata.google.cloud.datacatalog.v1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datacatalog/lineage/apiv1/snippet_metadata.google.cloud.datacatalog.lineage.v1.json",
+          "path": "/internal/generated/snippets/datacatalog/lineage/apiv1/snippet_metadata.google.cloud.datacatalog.lineage.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datacatalog/lineage/configmanagement/apiv1/snippet_metadata.google.cloud.datacatalog.lineage.configmanagement.v1.json",
+          "path": "/internal/generated/snippets/datacatalog/lineage/configmanagement/apiv1/snippet_metadata.google.cloud.datacatalog.lineage.configmanagement.v1.json",
           "type": "json"
         }
       ]
@@ -709,7 +709,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataflow/apiv1beta3/snippet_metadata.google.dataflow.v1beta3.json",
+          "path": "/internal/generated/snippets/dataflow/apiv1beta3/snippet_metadata.google.dataflow.v1beta3.json",
           "type": "json"
         }
       ]
@@ -719,12 +719,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataform/apiv1/snippet_metadata.google.cloud.dataform.v1.json",
+          "path": "/internal/generated/snippets/dataform/apiv1/snippet_metadata.google.cloud.dataform.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataform/apiv1beta1/snippet_metadata.google.cloud.dataform.v1beta1.json",
+          "path": "/internal/generated/snippets/dataform/apiv1beta1/snippet_metadata.google.cloud.dataform.v1beta1.json",
           "type": "json"
         }
       ]
@@ -734,7 +734,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datafusion/apiv1/snippet_metadata.google.cloud.datafusion.v1.json",
+          "path": "/internal/generated/snippets/datafusion/apiv1/snippet_metadata.google.cloud.datafusion.v1.json",
           "type": "json"
         }
       ]
@@ -744,7 +744,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datalabeling/apiv1beta1/snippet_metadata.google.cloud.datalabeling.v1beta1.json",
+          "path": "/internal/generated/snippets/datalabeling/apiv1beta1/snippet_metadata.google.cloud.datalabeling.v1beta1.json",
           "type": "json"
         }
       ]
@@ -754,7 +754,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datamanager/apiv1/snippet_metadata.google.ads.datamanager.v1.json",
+          "path": "/internal/generated/snippets/datamanager/apiv1/snippet_metadata.google.ads.datamanager.v1.json",
           "type": "json"
         }
       ]
@@ -764,7 +764,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataplex/apiv1/snippet_metadata.google.cloud.dataplex.v1.json",
+          "path": "/internal/generated/snippets/dataplex/apiv1/snippet_metadata.google.cloud.dataplex.v1.json",
           "type": "json"
         }
       ]
@@ -774,7 +774,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataproc/apiv1/snippet_metadata.google.cloud.dataproc.v1.json",
+          "path": "/internal/generated/snippets/dataproc/apiv1/snippet_metadata.google.cloud.dataproc.v1.json",
           "type": "json"
         }
       ]
@@ -784,7 +784,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dataqna/apiv1alpha/snippet_metadata.google.cloud.dataqna.v1alpha.json",
+          "path": "/internal/generated/snippets/dataqna/apiv1alpha/snippet_metadata.google.cloud.dataqna.v1alpha.json",
           "type": "json"
         }
       ]
@@ -794,12 +794,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datastream/apiv1/snippet_metadata.google.cloud.datastream.v1.json",
+          "path": "/internal/generated/snippets/datastream/apiv1/snippet_metadata.google.cloud.datastream.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/datastream/apiv1alpha1/snippet_metadata.google.cloud.datastream.v1alpha1.json",
+          "path": "/internal/generated/snippets/datastream/apiv1alpha1/snippet_metadata.google.cloud.datastream.v1alpha1.json",
           "type": "json"
         }
       ]
@@ -809,7 +809,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/deploy/apiv1/snippet_metadata.google.cloud.deploy.v1.json",
+          "path": "/internal/generated/snippets/deploy/apiv1/snippet_metadata.google.cloud.deploy.v1.json",
           "type": "json"
         }
       ]
@@ -819,7 +819,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/developerconnect/apiv1/snippet_metadata.google.cloud.developerconnect.v1.json",
+          "path": "/internal/generated/snippets/developerconnect/apiv1/snippet_metadata.google.cloud.developerconnect.v1.json",
           "type": "json"
         }
       ]
@@ -829,7 +829,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/devicestreaming/apiv1/snippet_metadata.google.cloud.devicestreaming.v1.json",
+          "path": "/internal/generated/snippets/devicestreaming/apiv1/snippet_metadata.google.cloud.devicestreaming.v1.json",
           "type": "json"
         }
       ]
@@ -839,22 +839,22 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dialogflow/apiv2/snippet_metadata.google.cloud.dialogflow.v2.json",
+          "path": "/internal/generated/snippets/dialogflow/apiv2/snippet_metadata.google.cloud.dialogflow.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dialogflow/apiv2beta1/snippet_metadata.google.cloud.dialogflow.v2beta1.json",
+          "path": "/internal/generated/snippets/dialogflow/apiv2beta1/snippet_metadata.google.cloud.dialogflow.v2beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dialogflow/cx/apiv3/snippet_metadata.google.cloud.dialogflow.cx.v3.json",
+          "path": "/internal/generated/snippets/dialogflow/cx/apiv3/snippet_metadata.google.cloud.dialogflow.cx.v3.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dialogflow/cx/apiv3beta1/snippet_metadata.google.cloud.dialogflow.cx.v3beta1.json",
+          "path": "/internal/generated/snippets/dialogflow/cx/apiv3beta1/snippet_metadata.google.cloud.dialogflow.cx.v3beta1.json",
           "type": "json"
         }
       ]
@@ -864,17 +864,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/discoveryengine/apiv1/snippet_metadata.google.cloud.discoveryengine.v1.json",
+          "path": "/internal/generated/snippets/discoveryengine/apiv1/snippet_metadata.google.cloud.discoveryengine.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/discoveryengine/apiv1alpha/snippet_metadata.google.cloud.discoveryengine.v1alpha.json",
+          "path": "/internal/generated/snippets/discoveryengine/apiv1alpha/snippet_metadata.google.cloud.discoveryengine.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/discoveryengine/apiv1beta/snippet_metadata.google.cloud.discoveryengine.v1beta.json",
+          "path": "/internal/generated/snippets/discoveryengine/apiv1beta/snippet_metadata.google.cloud.discoveryengine.v1beta.json",
           "type": "json"
         }
       ]
@@ -884,7 +884,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/dlp/apiv2/snippet_metadata.google.privacy.dlp.v2.json",
+          "path": "/internal/generated/snippets/dlp/apiv2/snippet_metadata.google.privacy.dlp.v2.json",
           "type": "json"
         }
       ]
@@ -894,12 +894,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/documentai/apiv1/snippet_metadata.google.cloud.documentai.v1.json",
+          "path": "/internal/generated/snippets/documentai/apiv1/snippet_metadata.google.cloud.documentai.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/documentai/apiv1beta3/snippet_metadata.google.cloud.documentai.v1beta3.json",
+          "path": "/internal/generated/snippets/documentai/apiv1beta3/snippet_metadata.google.cloud.documentai.v1beta3.json",
           "type": "json"
         }
       ]
@@ -909,7 +909,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/domains/apiv1beta1/snippet_metadata.google.cloud.domains.v1beta1.json",
+          "path": "/internal/generated/snippets/domains/apiv1beta1/snippet_metadata.google.cloud.domains.v1beta1.json",
           "type": "json"
         }
       ]
@@ -919,7 +919,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/edgecontainer/apiv1/snippet_metadata.google.cloud.edgecontainer.v1.json",
+          "path": "/internal/generated/snippets/edgecontainer/apiv1/snippet_metadata.google.cloud.edgecontainer.v1.json",
           "type": "json"
         }
       ]
@@ -929,7 +929,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/edgenetwork/apiv1/snippet_metadata.google.cloud.edgenetwork.v1.json",
+          "path": "/internal/generated/snippets/edgenetwork/apiv1/snippet_metadata.google.cloud.edgenetwork.v1.json",
           "type": "json"
         }
       ]
@@ -939,7 +939,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/errorreporting/apiv1beta1/snippet_metadata.google.devtools.clouderrorreporting.v1beta1.json",
+          "path": "/internal/generated/snippets/errorreporting/apiv1beta1/snippet_metadata.google.devtools.clouderrorreporting.v1beta1.json",
           "type": "json"
         }
       ]
@@ -949,7 +949,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/essentialcontacts/apiv1/snippet_metadata.google.cloud.essentialcontacts.v1.json",
+          "path": "/internal/generated/snippets/essentialcontacts/apiv1/snippet_metadata.google.cloud.essentialcontacts.v1.json",
           "type": "json"
         }
       ]
@@ -959,12 +959,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/eventarc/apiv1/snippet_metadata.google.cloud.eventarc.v1.json",
+          "path": "/internal/generated/snippets/eventarc/apiv1/snippet_metadata.google.cloud.eventarc.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/eventarc/publishing/apiv1/snippet_metadata.google.cloud.eventarc.publishing.v1.json",
+          "path": "/internal/generated/snippets/eventarc/publishing/apiv1/snippet_metadata.google.cloud.eventarc.publishing.v1.json",
           "type": "json"
         }
       ]
@@ -974,7 +974,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/filestore/apiv1/snippet_metadata.google.cloud.filestore.v1.json",
+          "path": "/internal/generated/snippets/filestore/apiv1/snippet_metadata.google.cloud.filestore.v1.json",
           "type": "json"
         }
       ]
@@ -984,7 +984,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/financialservices/apiv1/snippet_metadata.google.cloud.financialservices.v1.json",
+          "path": "/internal/generated/snippets/financialservices/apiv1/snippet_metadata.google.cloud.financialservices.v1.json",
           "type": "json"
         }
       ]
@@ -994,17 +994,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/functions/apiv1/snippet_metadata.google.cloud.functions.v1.json",
+          "path": "/internal/generated/snippets/functions/apiv1/snippet_metadata.google.cloud.functions.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/functions/apiv2/snippet_metadata.google.cloud.functions.v2.json",
+          "path": "/internal/generated/snippets/functions/apiv2/snippet_metadata.google.cloud.functions.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/functions/apiv2beta/snippet_metadata.google.cloud.functions.v2beta.json",
+          "path": "/internal/generated/snippets/functions/apiv2beta/snippet_metadata.google.cloud.functions.v2beta.json",
           "type": "json"
         }
       ]
@@ -1014,12 +1014,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/geminidataanalytics/apiv1/snippet_metadata.google.cloud.geminidataanalytics.v1.json",
+          "path": "/internal/generated/snippets/geminidataanalytics/apiv1/snippet_metadata.google.cloud.geminidataanalytics.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/geminidataanalytics/apiv1beta/snippet_metadata.google.cloud.geminidataanalytics.v1beta.json",
+          "path": "/internal/generated/snippets/geminidataanalytics/apiv1beta/snippet_metadata.google.cloud.geminidataanalytics.v1beta.json",
           "type": "json"
         }
       ]
@@ -1029,7 +1029,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkebackup/apiv1/snippet_metadata.google.cloud.gkebackup.v1.json",
+          "path": "/internal/generated/snippets/gkebackup/apiv1/snippet_metadata.google.cloud.gkebackup.v1.json",
           "type": "json"
         }
       ]
@@ -1039,12 +1039,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkeconnect/gateway/apiv1/snippet_metadata.google.cloud.gkeconnect.gateway.v1.json",
+          "path": "/internal/generated/snippets/gkeconnect/gateway/apiv1/snippet_metadata.google.cloud.gkeconnect.gateway.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkeconnect/gateway/apiv1beta1/snippet_metadata.google.cloud.gkeconnect.gateway.v1beta1.json",
+          "path": "/internal/generated/snippets/gkeconnect/gateway/apiv1beta1/snippet_metadata.google.cloud.gkeconnect.gateway.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1054,7 +1054,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkehub/apiv1beta1/snippet_metadata.google.cloud.gkehub.v1beta1.json",
+          "path": "/internal/generated/snippets/gkehub/apiv1beta1/snippet_metadata.google.cloud.gkehub.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1064,7 +1064,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkemulticloud/apiv1/snippet_metadata.google.cloud.gkemulticloud.v1.json",
+          "path": "/internal/generated/snippets/gkemulticloud/apiv1/snippet_metadata.google.cloud.gkemulticloud.v1.json",
           "type": "json"
         }
       ]
@@ -1074,7 +1074,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gkerecommender/apiv1/snippet_metadata.google.cloud.gkerecommender.v1.json",
+          "path": "/internal/generated/snippets/gkerecommender/apiv1/snippet_metadata.google.cloud.gkerecommender.v1.json",
           "type": "json"
         }
       ]
@@ -1087,7 +1087,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/gsuiteaddons/apiv1/snippet_metadata.google.cloud.gsuiteaddons.v1.json",
+          "path": "/internal/generated/snippets/gsuiteaddons/apiv1/snippet_metadata.google.cloud.gsuiteaddons.v1.json",
           "type": "json"
         }
       ]
@@ -1097,12 +1097,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/hypercomputecluster/apiv1/snippet_metadata.google.cloud.hypercomputecluster.v1.json",
+          "path": "/internal/generated/snippets/hypercomputecluster/apiv1/snippet_metadata.google.cloud.hypercomputecluster.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/hypercomputecluster/apiv1beta/snippet_metadata.google.cloud.hypercomputecluster.v1beta.json",
+          "path": "/internal/generated/snippets/hypercomputecluster/apiv1beta/snippet_metadata.google.cloud.hypercomputecluster.v1beta.json",
           "type": "json"
         }
       ]
@@ -1112,27 +1112,27 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iam/apiv1/snippet_metadata.google.iam.v1.json",
+          "path": "/internal/generated/snippets/iam/apiv1/snippet_metadata.google.iam.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iam/apiv2/snippet_metadata.google.iam.v2.json",
+          "path": "/internal/generated/snippets/iam/apiv2/snippet_metadata.google.iam.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iam/apiv3/snippet_metadata.google.iam.v3.json",
+          "path": "/internal/generated/snippets/iam/apiv3/snippet_metadata.google.iam.v3.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iam/apiv3beta/snippet_metadata.google.iam.v3beta.json",
+          "path": "/internal/generated/snippets/iam/apiv3beta/snippet_metadata.google.iam.v3beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iam/credentials/apiv1/snippet_metadata.google.iam.credentials.v1.json",
+          "path": "/internal/generated/snippets/iam/credentials/apiv1/snippet_metadata.google.iam.credentials.v1.json",
           "type": "json"
         }
       ]
@@ -1142,7 +1142,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iap/apiv1/snippet_metadata.google.cloud.iap.v1.json",
+          "path": "/internal/generated/snippets/iap/apiv1/snippet_metadata.google.cloud.iap.v1.json",
           "type": "json"
         }
       ]
@@ -1152,7 +1152,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/identitytoolkit/apiv2/snippet_metadata.google.cloud.identitytoolkit.v2.json",
+          "path": "/internal/generated/snippets/identitytoolkit/apiv2/snippet_metadata.google.cloud.identitytoolkit.v2.json",
           "type": "json"
         }
       ]
@@ -1162,7 +1162,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/ids/apiv1/snippet_metadata.google.cloud.ids.v1.json",
+          "path": "/internal/generated/snippets/ids/apiv1/snippet_metadata.google.cloud.ids.v1.json",
           "type": "json"
         }
       ]
@@ -1172,7 +1172,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/iot/apiv1/snippet_metadata.google.cloud.iot.v1.json",
+          "path": "/internal/generated/snippets/iot/apiv1/snippet_metadata.google.cloud.iot.v1.json",
           "type": "json"
         }
       ]
@@ -1182,12 +1182,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/kms/apiv1/snippet_metadata.google.cloud.kms.v1.json",
+          "path": "/internal/generated/snippets/kms/apiv1/snippet_metadata.google.cloud.kms.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/kms/inventory/apiv1/snippet_metadata.google.cloud.kms.inventory.v1.json",
+          "path": "/internal/generated/snippets/kms/inventory/apiv1/snippet_metadata.google.cloud.kms.inventory.v1.json",
           "type": "json"
         }
       ]
@@ -1197,17 +1197,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/language/apiv1/snippet_metadata.google.cloud.language.v1.json",
+          "path": "/internal/generated/snippets/language/apiv1/snippet_metadata.google.cloud.language.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/language/apiv1beta2/snippet_metadata.google.cloud.language.v1beta2.json",
+          "path": "/internal/generated/snippets/language/apiv1beta2/snippet_metadata.google.cloud.language.v1beta2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/language/apiv2/snippet_metadata.google.cloud.language.v2.json",
+          "path": "/internal/generated/snippets/language/apiv2/snippet_metadata.google.cloud.language.v2.json",
           "type": "json"
         }
       ]
@@ -1217,7 +1217,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/licensemanager/apiv1/snippet_metadata.google.cloud.licensemanager.v1.json",
+          "path": "/internal/generated/snippets/licensemanager/apiv1/snippet_metadata.google.cloud.licensemanager.v1.json",
           "type": "json"
         }
       ]
@@ -1227,7 +1227,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/lifesciences/apiv2beta/snippet_metadata.google.cloud.lifesciences.v2beta.json",
+          "path": "/internal/generated/snippets/lifesciences/apiv2beta/snippet_metadata.google.cloud.lifesciences.v2beta.json",
           "type": "json"
         }
       ]
@@ -1237,7 +1237,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/locationfinder/apiv1/snippet_metadata.google.cloud.locationfinder.v1.json",
+          "path": "/internal/generated/snippets/locationfinder/apiv1/snippet_metadata.google.cloud.locationfinder.v1.json",
           "type": "json"
         }
       ]
@@ -1247,7 +1247,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/logging/apiv2/snippet_metadata.google.logging.v2.json",
+          "path": "/internal/generated/snippets/logging/apiv2/snippet_metadata.google.logging.v2.json",
           "type": "json"
         }
       ]
@@ -1257,7 +1257,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/longrunning/autogen/snippet_metadata.google.longrunning.json",
+          "path": "/internal/generated/snippets/longrunning/autogen/snippet_metadata.google.longrunning.json",
           "type": "json"
         }
       ]
@@ -1267,7 +1267,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/lustre/apiv1/snippet_metadata.google.cloud.lustre.v1.json",
+          "path": "/internal/generated/snippets/lustre/apiv1/snippet_metadata.google.cloud.lustre.v1.json",
           "type": "json"
         }
       ]
@@ -1277,12 +1277,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maintenance/api/apiv1/snippet_metadata.google.cloud.maintenance.api.v1.json",
+          "path": "/internal/generated/snippets/maintenance/api/apiv1/snippet_metadata.google.cloud.maintenance.api.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maintenance/api/apiv1beta/snippet_metadata.google.cloud.maintenance.api.v1beta.json",
+          "path": "/internal/generated/snippets/maintenance/api/apiv1beta/snippet_metadata.google.cloud.maintenance.api.v1beta.json",
           "type": "json"
         }
       ]
@@ -1292,7 +1292,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/managedidentities/apiv1/snippet_metadata.google.cloud.managedidentities.v1.json",
+          "path": "/internal/generated/snippets/managedidentities/apiv1/snippet_metadata.google.cloud.managedidentities.v1.json",
           "type": "json"
         }
       ]
@@ -1302,12 +1302,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/managedkafka/apiv1/snippet_metadata.google.cloud.managedkafka.v1.json",
+          "path": "/internal/generated/snippets/managedkafka/apiv1/snippet_metadata.google.cloud.managedkafka.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/managedkafka/schemaregistry/apiv1/snippet_metadata.google.cloud.managedkafka.schemaregistry.v1.json",
+          "path": "/internal/generated/snippets/managedkafka/schemaregistry/apiv1/snippet_metadata.google.cloud.managedkafka.schemaregistry.v1.json",
           "type": "json"
         }
       ]
@@ -1317,42 +1317,42 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/addressvalidation/apiv1/snippet_metadata.google.maps.addressvalidation.v1.json",
+          "path": "/internal/generated/snippets/maps/addressvalidation/apiv1/snippet_metadata.google.maps.addressvalidation.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/areainsights/apiv1/snippet_metadata.google.maps.areainsights.v1.json",
+          "path": "/internal/generated/snippets/maps/areainsights/apiv1/snippet_metadata.google.maps.areainsights.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/fleetengine/apiv1/snippet_metadata.maps.fleetengine.v1.json",
+          "path": "/internal/generated/snippets/maps/fleetengine/apiv1/snippet_metadata.maps.fleetengine.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/geocode/apiv4/snippet_metadata.google.maps.geocode.v4.json",
+          "path": "/internal/generated/snippets/maps/geocode/apiv4/snippet_metadata.google.maps.geocode.v4.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/places/apiv1/snippet_metadata.google.maps.places.v1.json",
+          "path": "/internal/generated/snippets/maps/places/apiv1/snippet_metadata.google.maps.places.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/routeoptimization/apiv1/snippet_metadata.google.maps.routeoptimization.v1.json",
+          "path": "/internal/generated/snippets/maps/routeoptimization/apiv1/snippet_metadata.google.maps.routeoptimization.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/routing/apiv2/snippet_metadata.google.maps.routing.v2.json",
+          "path": "/internal/generated/snippets/maps/routing/apiv2/snippet_metadata.google.maps.routing.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/maps/solar/apiv1/snippet_metadata.google.maps.solar.v1.json",
+          "path": "/internal/generated/snippets/maps/solar/apiv1/snippet_metadata.google.maps.solar.v1.json",
           "type": "json"
         }
       ]
@@ -1362,7 +1362,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/mediatranslation/apiv1beta1/snippet_metadata.google.cloud.mediatranslation.v1beta1.json",
+          "path": "/internal/generated/snippets/mediatranslation/apiv1beta1/snippet_metadata.google.cloud.mediatranslation.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1372,12 +1372,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/memcache/apiv1/snippet_metadata.google.cloud.memcache.v1.json",
+          "path": "/internal/generated/snippets/memcache/apiv1/snippet_metadata.google.cloud.memcache.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/memcache/apiv1beta2/snippet_metadata.google.cloud.memcache.v1beta2.json",
+          "path": "/internal/generated/snippets/memcache/apiv1beta2/snippet_metadata.google.cloud.memcache.v1beta2.json",
           "type": "json"
         }
       ]
@@ -1387,12 +1387,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/memorystore/apiv1/snippet_metadata.google.cloud.memorystore.v1.json",
+          "path": "/internal/generated/snippets/memorystore/apiv1/snippet_metadata.google.cloud.memorystore.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/memorystore/apiv1beta/snippet_metadata.google.cloud.memorystore.v1beta.json",
+          "path": "/internal/generated/snippets/memorystore/apiv1beta/snippet_metadata.google.cloud.memorystore.v1beta.json",
           "type": "json"
         }
       ]
@@ -1402,17 +1402,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/metastore/apiv1/snippet_metadata.google.cloud.metastore.v1.json",
+          "path": "/internal/generated/snippets/metastore/apiv1/snippet_metadata.google.cloud.metastore.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/metastore/apiv1alpha/snippet_metadata.google.cloud.metastore.v1alpha.json",
+          "path": "/internal/generated/snippets/metastore/apiv1alpha/snippet_metadata.google.cloud.metastore.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/metastore/apiv1beta/snippet_metadata.google.cloud.metastore.v1beta.json",
+          "path": "/internal/generated/snippets/metastore/apiv1beta/snippet_metadata.google.cloud.metastore.v1beta.json",
           "type": "json"
         }
       ]
@@ -1422,7 +1422,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/migrationcenter/apiv1/snippet_metadata.google.cloud.migrationcenter.v1.json",
+          "path": "/internal/generated/snippets/migrationcenter/apiv1/snippet_metadata.google.cloud.migrationcenter.v1.json",
           "type": "json"
         }
       ]
@@ -1432,12 +1432,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/modelarmor/apiv1/snippet_metadata.google.cloud.modelarmor.v1.json",
+          "path": "/internal/generated/snippets/modelarmor/apiv1/snippet_metadata.google.cloud.modelarmor.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/modelarmor/apiv1beta/snippet_metadata.google.cloud.modelarmor.v1beta.json",
+          "path": "/internal/generated/snippets/modelarmor/apiv1beta/snippet_metadata.google.cloud.modelarmor.v1beta.json",
           "type": "json"
         }
       ]
@@ -1447,17 +1447,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/monitoring/apiv3/v2/snippet_metadata.google.monitoring.v3.json",
+          "path": "/internal/generated/snippets/monitoring/apiv3/v2/snippet_metadata.google.monitoring.v3.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/monitoring/dashboard/apiv1/snippet_metadata.google.monitoring.dashboard.v1.json",
+          "path": "/internal/generated/snippets/monitoring/dashboard/apiv1/snippet_metadata.google.monitoring.dashboard.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/monitoring/metricsscope/apiv1/snippet_metadata.google.monitoring.metricsscope.v1.json",
+          "path": "/internal/generated/snippets/monitoring/metricsscope/apiv1/snippet_metadata.google.monitoring.metricsscope.v1.json",
           "type": "json"
         }
       ]
@@ -1467,7 +1467,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/netapp/apiv1/snippet_metadata.google.cloud.netapp.v1.json",
+          "path": "/internal/generated/snippets/netapp/apiv1/snippet_metadata.google.cloud.netapp.v1.json",
           "type": "json"
         }
       ]
@@ -1477,17 +1477,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networkconnectivity/apiv1/snippet_metadata.google.cloud.networkconnectivity.v1.json",
+          "path": "/internal/generated/snippets/networkconnectivity/apiv1/snippet_metadata.google.cloud.networkconnectivity.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networkconnectivity/apiv1alpha1/snippet_metadata.google.cloud.networkconnectivity.v1alpha1.json",
+          "path": "/internal/generated/snippets/networkconnectivity/apiv1alpha1/snippet_metadata.google.cloud.networkconnectivity.v1alpha1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networkconnectivity/apiv1beta/snippet_metadata.google.cloud.networkconnectivity.v1beta.json",
+          "path": "/internal/generated/snippets/networkconnectivity/apiv1beta/snippet_metadata.google.cloud.networkconnectivity.v1beta.json",
           "type": "json"
         }
       ]
@@ -1497,7 +1497,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networkmanagement/apiv1/snippet_metadata.google.cloud.networkmanagement.v1.json",
+          "path": "/internal/generated/snippets/networkmanagement/apiv1/snippet_metadata.google.cloud.networkmanagement.v1.json",
           "type": "json"
         }
       ]
@@ -1507,12 +1507,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networksecurity/apiv1/snippet_metadata.google.cloud.networksecurity.v1.json",
+          "path": "/internal/generated/snippets/networksecurity/apiv1/snippet_metadata.google.cloud.networksecurity.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networksecurity/apiv1beta1/snippet_metadata.google.cloud.networksecurity.v1beta1.json",
+          "path": "/internal/generated/snippets/networksecurity/apiv1beta1/snippet_metadata.google.cloud.networksecurity.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1522,7 +1522,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/networkservices/apiv1/snippet_metadata.google.cloud.networkservices.v1.json",
+          "path": "/internal/generated/snippets/networkservices/apiv1/snippet_metadata.google.cloud.networkservices.v1.json",
           "type": "json"
         }
       ]
@@ -1532,17 +1532,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/notebooks/apiv1/snippet_metadata.google.cloud.notebooks.v1.json",
+          "path": "/internal/generated/snippets/notebooks/apiv1/snippet_metadata.google.cloud.notebooks.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/notebooks/apiv1beta1/snippet_metadata.google.cloud.notebooks.v1beta1.json",
+          "path": "/internal/generated/snippets/notebooks/apiv1beta1/snippet_metadata.google.cloud.notebooks.v1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/notebooks/apiv2/snippet_metadata.google.cloud.notebooks.v2.json",
+          "path": "/internal/generated/snippets/notebooks/apiv2/snippet_metadata.google.cloud.notebooks.v2.json",
           "type": "json"
         }
       ]
@@ -1552,7 +1552,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/optimization/apiv1/snippet_metadata.google.cloud.optimization.v1.json",
+          "path": "/internal/generated/snippets/optimization/apiv1/snippet_metadata.google.cloud.optimization.v1.json",
           "type": "json"
         }
       ]
@@ -1562,7 +1562,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/oracledatabase/apiv1/snippet_metadata.google.cloud.oracledatabase.v1.json",
+          "path": "/internal/generated/snippets/oracledatabase/apiv1/snippet_metadata.google.cloud.oracledatabase.v1.json",
           "type": "json"
         }
       ]
@@ -1572,7 +1572,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/orchestration/airflow/service/apiv1/snippet_metadata.google.cloud.orchestration.airflow.service.v1.json",
+          "path": "/internal/generated/snippets/orchestration/airflow/service/apiv1/snippet_metadata.google.cloud.orchestration.airflow.service.v1.json",
           "type": "json"
         }
       ]
@@ -1582,7 +1582,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/orgpolicy/apiv2/snippet_metadata.google.cloud.orgpolicy.v2.json",
+          "path": "/internal/generated/snippets/orgpolicy/apiv2/snippet_metadata.google.cloud.orgpolicy.v2.json",
           "type": "json"
         }
       ]
@@ -1592,27 +1592,27 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/osconfig/agentendpoint/apiv1/snippet_metadata.google.cloud.osconfig.agentendpoint.v1.json",
+          "path": "/internal/generated/snippets/osconfig/agentendpoint/apiv1/snippet_metadata.google.cloud.osconfig.agentendpoint.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/osconfig/agentendpoint/apiv1beta/snippet_metadata.google.cloud.osconfig.agentendpoint.v1beta.json",
+          "path": "/internal/generated/snippets/osconfig/agentendpoint/apiv1beta/snippet_metadata.google.cloud.osconfig.agentendpoint.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/osconfig/apiv1/snippet_metadata.google.cloud.osconfig.v1.json",
+          "path": "/internal/generated/snippets/osconfig/apiv1/snippet_metadata.google.cloud.osconfig.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/osconfig/apiv1alpha/snippet_metadata.google.cloud.osconfig.v1alpha.json",
+          "path": "/internal/generated/snippets/osconfig/apiv1alpha/snippet_metadata.google.cloud.osconfig.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/osconfig/apiv1beta/snippet_metadata.google.cloud.osconfig.v1beta.json",
+          "path": "/internal/generated/snippets/osconfig/apiv1beta/snippet_metadata.google.cloud.osconfig.v1beta.json",
           "type": "json"
         }
       ]
@@ -1622,12 +1622,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/oslogin/apiv1/snippet_metadata.google.cloud.oslogin.v1.json",
+          "path": "/internal/generated/snippets/oslogin/apiv1/snippet_metadata.google.cloud.oslogin.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/oslogin/apiv1beta/snippet_metadata.google.cloud.oslogin.v1beta.json",
+          "path": "/internal/generated/snippets/oslogin/apiv1beta/snippet_metadata.google.cloud.oslogin.v1beta.json",
           "type": "json"
         }
       ]
@@ -1637,12 +1637,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/parallelstore/apiv1/snippet_metadata.google.cloud.parallelstore.v1.json",
+          "path": "/internal/generated/snippets/parallelstore/apiv1/snippet_metadata.google.cloud.parallelstore.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/parallelstore/apiv1beta/snippet_metadata.google.cloud.parallelstore.v1beta.json",
+          "path": "/internal/generated/snippets/parallelstore/apiv1beta/snippet_metadata.google.cloud.parallelstore.v1beta.json",
           "type": "json"
         }
       ]
@@ -1652,7 +1652,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/parametermanager/apiv1/snippet_metadata.google.cloud.parametermanager.v1.json",
+          "path": "/internal/generated/snippets/parametermanager/apiv1/snippet_metadata.google.cloud.parametermanager.v1.json",
           "type": "json"
         }
       ]
@@ -1662,7 +1662,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/phishingprotection/apiv1beta1/snippet_metadata.google.cloud.phishingprotection.v1beta1.json",
+          "path": "/internal/generated/snippets/phishingprotection/apiv1beta1/snippet_metadata.google.cloud.phishingprotection.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1672,7 +1672,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/policysimulator/apiv1/snippet_metadata.google.cloud.policysimulator.v1.json",
+          "path": "/internal/generated/snippets/policysimulator/apiv1/snippet_metadata.google.cloud.policysimulator.v1.json",
           "type": "json"
         }
       ]
@@ -1682,12 +1682,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/policytroubleshooter/apiv1/snippet_metadata.google.cloud.policytroubleshooter.v1.json",
+          "path": "/internal/generated/snippets/policytroubleshooter/apiv1/snippet_metadata.google.cloud.policytroubleshooter.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/policytroubleshooter/iam/apiv3/snippet_metadata.google.cloud.policytroubleshooter.iam.v3.json",
+          "path": "/internal/generated/snippets/policytroubleshooter/iam/apiv3/snippet_metadata.google.cloud.policytroubleshooter.iam.v3.json",
           "type": "json"
         }
       ]
@@ -1697,7 +1697,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/privatecatalog/apiv1beta1/snippet_metadata.google.cloud.privatecatalog.v1beta1.json",
+          "path": "/internal/generated/snippets/privatecatalog/apiv1beta1/snippet_metadata.google.cloud.privatecatalog.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1707,7 +1707,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/privilegedaccessmanager/apiv1/snippet_metadata.google.cloud.privilegedaccessmanager.v1.json",
+          "path": "/internal/generated/snippets/privilegedaccessmanager/apiv1/snippet_metadata.google.cloud.privilegedaccessmanager.v1.json",
           "type": "json"
         }
       ]
@@ -1720,7 +1720,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/rapidmigrationassessment/apiv1/snippet_metadata.google.cloud.rapidmigrationassessment.v1.json",
+          "path": "/internal/generated/snippets/rapidmigrationassessment/apiv1/snippet_metadata.google.cloud.rapidmigrationassessment.v1.json",
           "type": "json"
         }
       ]
@@ -1730,12 +1730,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/recaptchaenterprise/apiv1/snippet_metadata.google.cloud.recaptchaenterprise.v1.json",
+          "path": "/internal/generated/snippets/recaptchaenterprise/apiv1/snippet_metadata.google.cloud.recaptchaenterprise.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/recaptchaenterprise/apiv1beta1/snippet_metadata.google.cloud.recaptchaenterprise.v1beta1.json",
+          "path": "/internal/generated/snippets/recaptchaenterprise/apiv1beta1/snippet_metadata.google.cloud.recaptchaenterprise.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1745,7 +1745,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/recommendationengine/apiv1beta1/snippet_metadata.google.cloud.recommendationengine.v1beta1.json",
+          "path": "/internal/generated/snippets/recommendationengine/apiv1beta1/snippet_metadata.google.cloud.recommendationengine.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1755,12 +1755,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/recommender/apiv1/snippet_metadata.google.cloud.recommender.v1.json",
+          "path": "/internal/generated/snippets/recommender/apiv1/snippet_metadata.google.cloud.recommender.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/recommender/apiv1beta1/snippet_metadata.google.cloud.recommender.v1beta1.json",
+          "path": "/internal/generated/snippets/recommender/apiv1beta1/snippet_metadata.google.cloud.recommender.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1770,17 +1770,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/redis/apiv1/snippet_metadata.google.cloud.redis.v1.json",
+          "path": "/internal/generated/snippets/redis/apiv1/snippet_metadata.google.cloud.redis.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/redis/apiv1beta1/snippet_metadata.google.cloud.redis.v1beta1.json",
+          "path": "/internal/generated/snippets/redis/apiv1beta1/snippet_metadata.google.cloud.redis.v1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/redis/cluster/apiv1/snippet_metadata.google.cloud.redis.cluster.v1.json",
+          "path": "/internal/generated/snippets/redis/cluster/apiv1/snippet_metadata.google.cloud.redis.cluster.v1.json",
           "type": "json"
         }
       ]
@@ -1790,12 +1790,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/resourcemanager/apiv2/snippet_metadata.google.cloud.resourcemanager.v2.json",
+          "path": "/internal/generated/snippets/resourcemanager/apiv2/snippet_metadata.google.cloud.resourcemanager.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/resourcemanager/apiv3/snippet_metadata.google.cloud.resourcemanager.v3.json",
+          "path": "/internal/generated/snippets/resourcemanager/apiv3/snippet_metadata.google.cloud.resourcemanager.v3.json",
           "type": "json"
         }
       ]
@@ -1805,17 +1805,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/retail/apiv2/snippet_metadata.google.cloud.retail.v2.json",
+          "path": "/internal/generated/snippets/retail/apiv2/snippet_metadata.google.cloud.retail.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/retail/apiv2alpha/snippet_metadata.google.cloud.retail.v2alpha.json",
+          "path": "/internal/generated/snippets/retail/apiv2alpha/snippet_metadata.google.cloud.retail.v2alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/retail/apiv2beta/snippet_metadata.google.cloud.retail.v2beta.json",
+          "path": "/internal/generated/snippets/retail/apiv2beta/snippet_metadata.google.cloud.retail.v2beta.json",
           "type": "json"
         }
       ]
@@ -1825,7 +1825,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/run/apiv2/snippet_metadata.google.cloud.run.v2.json",
+          "path": "/internal/generated/snippets/run/apiv2/snippet_metadata.google.cloud.run.v2.json",
           "type": "json"
         }
       ]
@@ -1835,7 +1835,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/saasplatform/saasservicemgmt/apiv1beta1/snippet_metadata.google.cloud.saasplatform.saasservicemgmt.v1beta1.json",
+          "path": "/internal/generated/snippets/saasplatform/saasservicemgmt/apiv1beta1/snippet_metadata.google.cloud.saasplatform.saasservicemgmt.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1845,12 +1845,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/scheduler/apiv1/snippet_metadata.google.cloud.scheduler.v1.json",
+          "path": "/internal/generated/snippets/scheduler/apiv1/snippet_metadata.google.cloud.scheduler.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/scheduler/apiv1beta1/snippet_metadata.google.cloud.scheduler.v1beta1.json",
+          "path": "/internal/generated/snippets/scheduler/apiv1beta1/snippet_metadata.google.cloud.scheduler.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1860,12 +1860,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/secretmanager/apiv1/snippet_metadata.google.cloud.secretmanager.v1.json",
+          "path": "/internal/generated/snippets/secretmanager/apiv1/snippet_metadata.google.cloud.secretmanager.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/secretmanager/apiv1beta2/snippet_metadata.google.cloud.secretmanager.v1beta2.json",
+          "path": "/internal/generated/snippets/secretmanager/apiv1beta2/snippet_metadata.google.cloud.secretmanager.v1beta2.json",
           "type": "json"
         }
       ]
@@ -1875,7 +1875,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securesourcemanager/apiv1/snippet_metadata.google.cloud.securesourcemanager.v1.json",
+          "path": "/internal/generated/snippets/securesourcemanager/apiv1/snippet_metadata.google.cloud.securesourcemanager.v1.json",
           "type": "json"
         }
       ]
@@ -1885,17 +1885,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/security/privateca/apiv1/snippet_metadata.google.cloud.security.privateca.v1.json",
+          "path": "/internal/generated/snippets/security/privateca/apiv1/snippet_metadata.google.cloud.security.privateca.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/security/publicca/apiv1/snippet_metadata.google.cloud.security.publicca.v1.json",
+          "path": "/internal/generated/snippets/security/publicca/apiv1/snippet_metadata.google.cloud.security.publicca.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/security/publicca/apiv1beta1/snippet_metadata.google.cloud.security.publicca.v1beta1.json",
+          "path": "/internal/generated/snippets/security/publicca/apiv1beta1/snippet_metadata.google.cloud.security.publicca.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1905,27 +1905,27 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycenter/apiv1/snippet_metadata.google.cloud.securitycenter.v1.json",
+          "path": "/internal/generated/snippets/securitycenter/apiv1/snippet_metadata.google.cloud.securitycenter.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycenter/apiv1beta1/snippet_metadata.google.cloud.securitycenter.v1beta1.json",
+          "path": "/internal/generated/snippets/securitycenter/apiv1beta1/snippet_metadata.google.cloud.securitycenter.v1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycenter/apiv1p1beta1/snippet_metadata.google.cloud.securitycenter.v1p1beta1.json",
+          "path": "/internal/generated/snippets/securitycenter/apiv1p1beta1/snippet_metadata.google.cloud.securitycenter.v1p1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycenter/apiv2/snippet_metadata.google.cloud.securitycenter.v2.json",
+          "path": "/internal/generated/snippets/securitycenter/apiv2/snippet_metadata.google.cloud.securitycenter.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycenter/settings/apiv1beta1/snippet_metadata.google.cloud.securitycenter.settings.v1beta1.json",
+          "path": "/internal/generated/snippets/securitycenter/settings/apiv1beta1/snippet_metadata.google.cloud.securitycenter.settings.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1935,7 +1935,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securitycentermanagement/apiv1/snippet_metadata.google.cloud.securitycentermanagement.v1.json",
+          "path": "/internal/generated/snippets/securitycentermanagement/apiv1/snippet_metadata.google.cloud.securitycentermanagement.v1.json",
           "type": "json"
         }
       ]
@@ -1945,7 +1945,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/securityposture/apiv1/snippet_metadata.google.cloud.securityposture.v1.json",
+          "path": "/internal/generated/snippets/securityposture/apiv1/snippet_metadata.google.cloud.securityposture.v1.json",
           "type": "json"
         }
       ]
@@ -1955,7 +1955,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/servicecontrol/apiv1/snippet_metadata.google.api.servicecontrol.v1.json",
+          "path": "/internal/generated/snippets/servicecontrol/apiv1/snippet_metadata.google.api.servicecontrol.v1.json",
           "type": "json"
         }
       ]
@@ -1965,12 +1965,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/servicedirectory/apiv1/snippet_metadata.google.cloud.servicedirectory.v1.json",
+          "path": "/internal/generated/snippets/servicedirectory/apiv1/snippet_metadata.google.cloud.servicedirectory.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/servicedirectory/apiv1beta1/snippet_metadata.google.cloud.servicedirectory.v1beta1.json",
+          "path": "/internal/generated/snippets/servicedirectory/apiv1beta1/snippet_metadata.google.cloud.servicedirectory.v1beta1.json",
           "type": "json"
         }
       ]
@@ -1980,7 +1980,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/servicehealth/apiv1/snippet_metadata.google.cloud.servicehealth.v1.json",
+          "path": "/internal/generated/snippets/servicehealth/apiv1/snippet_metadata.google.cloud.servicehealth.v1.json",
           "type": "json"
         }
       ]
@@ -1990,7 +1990,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/servicemanagement/apiv1/snippet_metadata.google.api.servicemanagement.v1.json",
+          "path": "/internal/generated/snippets/servicemanagement/apiv1/snippet_metadata.google.api.servicemanagement.v1.json",
           "type": "json"
         }
       ]
@@ -2000,7 +2000,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/serviceusage/apiv1/snippet_metadata.google.api.serviceusage.v1.json",
+          "path": "/internal/generated/snippets/serviceusage/apiv1/snippet_metadata.google.api.serviceusage.v1.json",
           "type": "json"
         }
       ]
@@ -2010,7 +2010,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shell/apiv1/snippet_metadata.google.cloud.shell.v1.json",
+          "path": "/internal/generated/snippets/shell/apiv1/snippet_metadata.google.cloud.shell.v1.json",
           "type": "json"
         }
       ]
@@ -2020,137 +2020,137 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/css/apiv1/snippet_metadata.google.shopping.css.v1.json",
+          "path": "/internal/generated/snippets/shopping/css/apiv1/snippet_metadata.google.shopping.css.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/accounts/apiv1/snippet_metadata.google.shopping.merchant.accounts.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/accounts/apiv1/snippet_metadata.google.shopping.merchant.accounts.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/accounts/apiv1beta/snippet_metadata.google.shopping.merchant.accounts.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/accounts/apiv1beta/snippet_metadata.google.shopping.merchant.accounts.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/conversions/apiv1/snippet_metadata.google.shopping.merchant.conversions.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/conversions/apiv1/snippet_metadata.google.shopping.merchant.conversions.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/conversions/apiv1beta/snippet_metadata.google.shopping.merchant.conversions.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/conversions/apiv1beta/snippet_metadata.google.shopping.merchant.conversions.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/datasources/apiv1/snippet_metadata.google.shopping.merchant.datasources.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/datasources/apiv1/snippet_metadata.google.shopping.merchant.datasources.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/datasources/apiv1beta/snippet_metadata.google.shopping.merchant.datasources.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/datasources/apiv1beta/snippet_metadata.google.shopping.merchant.datasources.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/inventories/apiv1/snippet_metadata.google.shopping.merchant.inventories.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/inventories/apiv1/snippet_metadata.google.shopping.merchant.inventories.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/inventories/apiv1beta/snippet_metadata.google.shopping.merchant.inventories.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/inventories/apiv1beta/snippet_metadata.google.shopping.merchant.inventories.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/issueresolution/apiv1/snippet_metadata.google.shopping.merchant.issueresolution.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/issueresolution/apiv1/snippet_metadata.google.shopping.merchant.issueresolution.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/issueresolution/apiv1beta/snippet_metadata.google.shopping.merchant.issueresolution.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/issueresolution/apiv1beta/snippet_metadata.google.shopping.merchant.issueresolution.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/lfp/apiv1/snippet_metadata.google.shopping.merchant.lfp.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/lfp/apiv1/snippet_metadata.google.shopping.merchant.lfp.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/lfp/apiv1beta/snippet_metadata.google.shopping.merchant.lfp.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/lfp/apiv1beta/snippet_metadata.google.shopping.merchant.lfp.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/notifications/apiv1/snippet_metadata.google.shopping.merchant.notifications.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/notifications/apiv1/snippet_metadata.google.shopping.merchant.notifications.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/notifications/apiv1beta/snippet_metadata.google.shopping.merchant.notifications.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/notifications/apiv1beta/snippet_metadata.google.shopping.merchant.notifications.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/ordertracking/apiv1/snippet_metadata.google.shopping.merchant.ordertracking.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/ordertracking/apiv1/snippet_metadata.google.shopping.merchant.ordertracking.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/ordertracking/apiv1beta/snippet_metadata.google.shopping.merchant.ordertracking.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/ordertracking/apiv1beta/snippet_metadata.google.shopping.merchant.ordertracking.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/products/apiv1/snippet_metadata.google.shopping.merchant.products.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/products/apiv1/snippet_metadata.google.shopping.merchant.products.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/products/apiv1beta/snippet_metadata.google.shopping.merchant.products.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/products/apiv1beta/snippet_metadata.google.shopping.merchant.products.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/productstudio/apiv1alpha/snippet_metadata.google.shopping.merchant.productstudio.v1alpha.json",
+          "path": "/internal/generated/snippets/shopping/merchant/productstudio/apiv1alpha/snippet_metadata.google.shopping.merchant.productstudio.v1alpha.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/promotions/apiv1/snippet_metadata.google.shopping.merchant.promotions.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/promotions/apiv1/snippet_metadata.google.shopping.merchant.promotions.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/promotions/apiv1beta/snippet_metadata.google.shopping.merchant.promotions.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/promotions/apiv1beta/snippet_metadata.google.shopping.merchant.promotions.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/quota/apiv1/snippet_metadata.google.shopping.merchant.quota.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/quota/apiv1/snippet_metadata.google.shopping.merchant.quota.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/quota/apiv1beta/snippet_metadata.google.shopping.merchant.quota.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/quota/apiv1beta/snippet_metadata.google.shopping.merchant.quota.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/reports/apiv1/snippet_metadata.google.shopping.merchant.reports.v1.json",
+          "path": "/internal/generated/snippets/shopping/merchant/reports/apiv1/snippet_metadata.google.shopping.merchant.reports.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/reports/apiv1beta/snippet_metadata.google.shopping.merchant.reports.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/reports/apiv1beta/snippet_metadata.google.shopping.merchant.reports.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/shopping/merchant/reviews/apiv1beta/snippet_metadata.google.shopping.merchant.reviews.v1beta.json",
+          "path": "/internal/generated/snippets/shopping/merchant/reviews/apiv1beta/snippet_metadata.google.shopping.merchant.reviews.v1beta.json",
           "type": "json"
         }
       ]
@@ -2160,17 +2160,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/speech/apiv1/snippet_metadata.google.cloud.speech.v1.json",
+          "path": "/internal/generated/snippets/speech/apiv1/snippet_metadata.google.cloud.speech.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/speech/apiv1p1beta1/snippet_metadata.google.cloud.speech.v1p1beta1.json",
+          "path": "/internal/generated/snippets/speech/apiv1p1beta1/snippet_metadata.google.cloud.speech.v1p1beta1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/speech/apiv2/snippet_metadata.google.cloud.speech.v2.json",
+          "path": "/internal/generated/snippets/speech/apiv2/snippet_metadata.google.cloud.speech.v2.json",
           "type": "json"
         }
       ]
@@ -2180,7 +2180,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/storagebatchoperations/apiv1/snippet_metadata.google.cloud.storagebatchoperations.v1.json",
+          "path": "/internal/generated/snippets/storagebatchoperations/apiv1/snippet_metadata.google.cloud.storagebatchoperations.v1.json",
           "type": "json"
         }
       ]
@@ -2190,7 +2190,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/storageinsights/apiv1/snippet_metadata.google.cloud.storageinsights.v1.json",
+          "path": "/internal/generated/snippets/storageinsights/apiv1/snippet_metadata.google.cloud.storageinsights.v1.json",
           "type": "json"
         }
       ]
@@ -2200,7 +2200,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/storagetransfer/apiv1/snippet_metadata.google.storagetransfer.v1.json",
+          "path": "/internal/generated/snippets/storagetransfer/apiv1/snippet_metadata.google.storagetransfer.v1.json",
           "type": "json"
         }
       ]
@@ -2210,7 +2210,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/streetview/publish/apiv1/snippet_metadata.google.streetview.publish.v1.json",
+          "path": "/internal/generated/snippets/streetview/publish/apiv1/snippet_metadata.google.streetview.publish.v1.json",
           "type": "json"
         }
       ]
@@ -2220,12 +2220,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/support/apiv2/snippet_metadata.google.cloud.support.v2.json",
+          "path": "/internal/generated/snippets/support/apiv2/snippet_metadata.google.cloud.support.v2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/support/apiv2beta/snippet_metadata.google.cloud.support.v2beta.json",
+          "path": "/internal/generated/snippets/support/apiv2beta/snippet_metadata.google.cloud.support.v2beta.json",
           "type": "json"
         }
       ]
@@ -2235,12 +2235,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/talent/apiv4/snippet_metadata.google.cloud.talent.v4.json",
+          "path": "/internal/generated/snippets/talent/apiv4/snippet_metadata.google.cloud.talent.v4.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/talent/apiv4beta1/snippet_metadata.google.cloud.talent.v4beta1.json",
+          "path": "/internal/generated/snippets/talent/apiv4beta1/snippet_metadata.google.cloud.talent.v4beta1.json",
           "type": "json"
         }
       ]
@@ -2250,7 +2250,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/telcoautomation/apiv1/snippet_metadata.google.cloud.telcoautomation.v1.json",
+          "path": "/internal/generated/snippets/telcoautomation/apiv1/snippet_metadata.google.cloud.telcoautomation.v1.json",
           "type": "json"
         }
       ]
@@ -2260,7 +2260,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/texttospeech/apiv1/snippet_metadata.google.cloud.texttospeech.v1.json",
+          "path": "/internal/generated/snippets/texttospeech/apiv1/snippet_metadata.google.cloud.texttospeech.v1.json",
           "type": "json"
         }
       ]
@@ -2270,7 +2270,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/tpu/apiv1/snippet_metadata.google.cloud.tpu.v1.json",
+          "path": "/internal/generated/snippets/tpu/apiv1/snippet_metadata.google.cloud.tpu.v1.json",
           "type": "json"
         }
       ]
@@ -2280,12 +2280,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/trace/apiv1/snippet_metadata.google.devtools.cloudtrace.v1.json",
+          "path": "/internal/generated/snippets/trace/apiv1/snippet_metadata.google.devtools.cloudtrace.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/trace/apiv2/snippet_metadata.google.devtools.cloudtrace.v2.json",
+          "path": "/internal/generated/snippets/trace/apiv2/snippet_metadata.google.devtools.cloudtrace.v2.json",
           "type": "json"
         }
       ]
@@ -2295,7 +2295,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/translate/apiv3/snippet_metadata.google.cloud.translation.v3.json",
+          "path": "/internal/generated/snippets/translate/apiv3/snippet_metadata.google.cloud.translation.v3.json",
           "type": "json"
         }
       ]
@@ -2305,12 +2305,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vectorsearch/apiv1/snippet_metadata.google.cloud.vectorsearch.v1.json",
+          "path": "/internal/generated/snippets/vectorsearch/apiv1/snippet_metadata.google.cloud.vectorsearch.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vectorsearch/apiv1beta/snippet_metadata.google.cloud.vectorsearch.v1beta.json",
+          "path": "/internal/generated/snippets/vectorsearch/apiv1beta/snippet_metadata.google.cloud.vectorsearch.v1beta.json",
           "type": "json"
         }
       ]
@@ -2320,17 +2320,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/video/livestream/apiv1/snippet_metadata.google.cloud.video.livestream.v1.json",
+          "path": "/internal/generated/snippets/video/livestream/apiv1/snippet_metadata.google.cloud.video.livestream.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/video/stitcher/apiv1/snippet_metadata.google.cloud.video.stitcher.v1.json",
+          "path": "/internal/generated/snippets/video/stitcher/apiv1/snippet_metadata.google.cloud.video.stitcher.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/video/transcoder/apiv1/snippet_metadata.google.cloud.video.transcoder.v1.json",
+          "path": "/internal/generated/snippets/video/transcoder/apiv1/snippet_metadata.google.cloud.video.transcoder.v1.json",
           "type": "json"
         }
       ]
@@ -2340,17 +2340,17 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/videointelligence/apiv1/snippet_metadata.google.cloud.videointelligence.v1.json",
+          "path": "/internal/generated/snippets/videointelligence/apiv1/snippet_metadata.google.cloud.videointelligence.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/videointelligence/apiv1beta2/snippet_metadata.google.cloud.videointelligence.v1beta2.json",
+          "path": "/internal/generated/snippets/videointelligence/apiv1beta2/snippet_metadata.google.cloud.videointelligence.v1beta2.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/videointelligence/apiv1p3beta1/snippet_metadata.google.cloud.videointelligence.v1p3beta1.json",
+          "path": "/internal/generated/snippets/videointelligence/apiv1p3beta1/snippet_metadata.google.cloud.videointelligence.v1p3beta1.json",
           "type": "json"
         }
       ]
@@ -2360,12 +2360,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vision/apiv1/snippet_metadata.google.cloud.vision.v1.json",
+          "path": "/internal/generated/snippets/vision/apiv1/snippet_metadata.google.cloud.vision.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vision/apiv1p1beta1/snippet_metadata.google.cloud.vision.v1p1beta1.json",
+          "path": "/internal/generated/snippets/vision/apiv1p1beta1/snippet_metadata.google.cloud.vision.v1p1beta1.json",
           "type": "json"
         }
       ]
@@ -2375,7 +2375,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/visionai/apiv1/snippet_metadata.google.cloud.visionai.v1.json",
+          "path": "/internal/generated/snippets/visionai/apiv1/snippet_metadata.google.cloud.visionai.v1.json",
           "type": "json"
         }
       ]
@@ -2385,7 +2385,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vmmigration/apiv1/snippet_metadata.google.cloud.vmmigration.v1.json",
+          "path": "/internal/generated/snippets/vmmigration/apiv1/snippet_metadata.google.cloud.vmmigration.v1.json",
           "type": "json"
         }
       ]
@@ -2395,7 +2395,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vmwareengine/apiv1/snippet_metadata.google.cloud.vmwareengine.v1.json",
+          "path": "/internal/generated/snippets/vmwareengine/apiv1/snippet_metadata.google.cloud.vmwareengine.v1.json",
           "type": "json"
         }
       ]
@@ -2405,7 +2405,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/vpcaccess/apiv1/snippet_metadata.google.cloud.vpcaccess.v1.json",
+          "path": "/internal/generated/snippets/vpcaccess/apiv1/snippet_metadata.google.cloud.vpcaccess.v1.json",
           "type": "json"
         }
       ]
@@ -2415,12 +2415,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/webrisk/apiv1/snippet_metadata.google.cloud.webrisk.v1.json",
+          "path": "/internal/generated/snippets/webrisk/apiv1/snippet_metadata.google.cloud.webrisk.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/webrisk/apiv1beta1/snippet_metadata.google.cloud.webrisk.v1beta1.json",
+          "path": "/internal/generated/snippets/webrisk/apiv1beta1/snippet_metadata.google.cloud.webrisk.v1beta1.json",
           "type": "json"
         }
       ]
@@ -2430,7 +2430,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/websecurityscanner/apiv1/snippet_metadata.google.cloud.websecurityscanner.v1.json",
+          "path": "/internal/generated/snippets/websecurityscanner/apiv1/snippet_metadata.google.cloud.websecurityscanner.v1.json",
           "type": "json"
         }
       ]
@@ -2440,22 +2440,22 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workflows/apiv1/snippet_metadata.google.cloud.workflows.v1.json",
+          "path": "/internal/generated/snippets/workflows/apiv1/snippet_metadata.google.cloud.workflows.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workflows/apiv1beta/snippet_metadata.google.cloud.workflows.v1beta.json",
+          "path": "/internal/generated/snippets/workflows/apiv1beta/snippet_metadata.google.cloud.workflows.v1beta.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workflows/executions/apiv1/snippet_metadata.google.cloud.workflows.executions.v1.json",
+          "path": "/internal/generated/snippets/workflows/executions/apiv1/snippet_metadata.google.cloud.workflows.executions.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workflows/executions/apiv1beta/snippet_metadata.google.cloud.workflows.executions.v1beta.json",
+          "path": "/internal/generated/snippets/workflows/executions/apiv1beta/snippet_metadata.google.cloud.workflows.executions.v1beta.json",
           "type": "json"
         }
       ]
@@ -2465,7 +2465,7 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workloadmanager/apiv1/snippet_metadata.google.cloud.workloadmanager.v1.json",
+          "path": "/internal/generated/snippets/workloadmanager/apiv1/snippet_metadata.google.cloud.workloadmanager.v1.json",
           "type": "json"
         }
       ]
@@ -2475,12 +2475,12 @@
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workstations/apiv1/snippet_metadata.google.cloud.workstations.v1.json",
+          "path": "/internal/generated/snippets/workstations/apiv1/snippet_metadata.google.cloud.workstations.v1.json",
           "type": "json"
         },
         {
           "jsonpath": "$.clientLibrary.version",
-          "path": "../internal/generated/snippets/workstations/apiv1beta/snippet_metadata.google.cloud.workstations.v1beta.json",
+          "path": "/internal/generated/snippets/workstations/apiv1beta/snippet_metadata.google.cloud.workstations.v1beta.json",
           "type": "json"
         }
       ]
