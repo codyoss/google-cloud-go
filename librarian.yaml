@@ -158,6 +158,7 @@ libraries:
             - F_open_telemetry_attributes
             - F_proto_cloneof
           no_metadata: true
+      - path: google/cloud/asset/v1p7beta1
       - path: google/cloud/asset/v1p5beta1
         go:
           enabled_generator_features:

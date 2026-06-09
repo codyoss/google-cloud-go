@@ -1,10 +1,5 @@
 {
-  "release-type": "go-librarian",
   "include-component-in-tag": true,
-  "tag-separator": "/",
-  "plugins": [
-    "sentence-case"
-  ],
   "packages": {
     "accessapproval": {
       "component": "accessapproval",
@@ -593,6 +588,9 @@
     },
     "compute": {
       "component": "compute",
+      "exclude-paths": [
+        "compute/metadata"
+      ],
       "extra-files": [
         {
           "jsonpath": "$.clientLibrary.version",
@@ -604,9 +602,6 @@
           "path": "/internal/generated/snippets/compute/apiv1beta/snippet_metadata.google.cloud.compute.v1beta.json",
           "type": "json"
         }
-      ],
-      "exclude-paths": [
-        "compute/metadata"
       ]
     },
     "confidentialcomputing": {
@@ -2485,5 +2480,10 @@
         }
       ]
     }
-  }
+  },
+  "plugins": [
+    "sentence-case"
+  ],
+  "release-type": "go-librarian",
+  "tag-separator": "/"
 }
