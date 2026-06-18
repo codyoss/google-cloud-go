@@ -56,6 +56,7 @@ func TestPSTest(t *testing.T) {
 	}
 	defer conn.Close()
 
+	// Stuff and things
 	opts := withGRPCHeadersAssertionAlt(t, option.WithGRPCConn(conn))
 	client, err := pubsub.NewClient(ctx, "some-project", opts...)
 	if err != nil {
