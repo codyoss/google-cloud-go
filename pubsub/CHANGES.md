@@ -1,5 +1,12 @@
 # Changes
 
+## [1.51.0](https://github.com/codyoss/google-cloud-go/compare/pubsub/v1.50.2...pubsub/v1.51.0) (2026-06-18)
+
+
+### Features
+
+* Stuff and things ([2245f9d](https://github.com/codyoss/google-cloud-go/commit/2245f9dd2a439de3bd1c4fe5879d2103adc27fbc))
+
 ## [1.50.2](https://github.com/googleapis/google-cloud-go/releases/tag/pubsub%2Fv1.50.2) (2026-03-31)
 
 ### Bug Fixes
